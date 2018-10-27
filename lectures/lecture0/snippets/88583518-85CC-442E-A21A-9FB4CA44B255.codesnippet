@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic simple 006</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//006. Array and dictionaries
+var shoppingList = [&lt;#"catfish"#&gt;, &lt;#"water"#&gt;, &lt;#"tulips"#&gt;]
+shoppingList[1] = &lt;#"bottle of water"#&gt;
+
+var occupations = [
+    "Malcolm": "Captain",
+    "Kaylee": "Mechanic",
+]
+occupations[&lt;#"Jayne"#&gt;] = &lt;#"Public Relations"#&gt;
+print(shoppingList)
+print(occupations)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>88583518-85CC-442E-A21A-9FB4CA44B255</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create array with strings and dictionary with string values</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>006 basic-simple-values: make array and dictionary</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
