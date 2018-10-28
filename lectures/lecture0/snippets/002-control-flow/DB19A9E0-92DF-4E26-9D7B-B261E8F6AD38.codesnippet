@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic control 006</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 006. While and repeat
+var n = &lt;#2#&gt;
+while n &lt; 100 {
+    n *= &lt;#2#&gt;
+}
+print(n)
+
+var m = 2
+repeat {
+    m *= &lt;#2#&gt;
+} while m &lt; 100
+print(m)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>DB19A9E0-92DF-4E26-9D7B-B261E8F6AD38</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Two simple while and repeat loop</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>006 basic-control-flow: while and repeat</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
