@@ -24,6 +24,7 @@
 		92D0BCDE2184BEEA000B2FCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92E8EEB82186470E005E4421 /* 001-Simple-Values.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "001-Simple-Values.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		92E8EEB92186470E005E4421 /* 002-Control-Flow.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "002-Control-Flow.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		92E8EEBA218655F1005E4421 /* 003-Functions-and-Closures.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "003-Functions-and-Closures.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +43,7 @@
 			children = (
 				92E8EEB82186470E005E4421 /* 001-Simple-Values.playground */,
 				92E8EEB92186470E005E4421 /* 002-Control-Flow.playground */,
+				92E8EEBA218655F1005E4421 /* 003-Functions-and-Closures.playground */,
 				92D0BCD12184BEE9000B2FCC /* lecture-0 */,
 				92D0BCD02184BEE9000B2FCC /* Products */,
 			);
