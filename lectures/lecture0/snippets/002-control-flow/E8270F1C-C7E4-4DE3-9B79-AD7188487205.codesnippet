@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic control 003</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// 003. Default value for optional
+let nickName: String? = &lt;#nil#&gt;
+let fullName: String = &lt;#"John Appleseed"#&gt;
+let informalGreeting = "Hi \(nickName ?? fullName)"
+print(informalGreeting)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>E8270F1C-C7E4-4DE3-9B79-AD7188487205</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create two strinngs, one of them optional. Combine and print result</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>003 basic-control-flow: default value for optional</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic simple 002</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//002. Simple values
+var &lt;#myVariable#&gt; = 42
+&lt;#myVariable#&gt; = 50
+let &lt;#myConstant#&gt; = 42
+print(&lt;#myVariable#&gt;)
+print(&lt;#myConstant#&gt;)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>FEBE0ECD-8EAB-4A04-B2BD-AD20E4228A35</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Generic</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create variables and constant and print it to console</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>002 basic-simple-values: simple var and let variables</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

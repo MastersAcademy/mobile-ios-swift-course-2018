@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic simple all</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//001 Basics. Simple print Hello World
+print("Hello, world!")
+
+//002. Simple values
+var myVariable = 42
+myVariable = 50
+let myConstant = 42
+print(myVariable)
+print(myConstant)
+
+//003. Inferior type OR Implict and explicit
+let implicitInteger = 70
+let implicitDouble = 70.0
+let explicitDouble: Double = 70
+print(implicitInteger)
+print(explicitDouble)
+
+//004. Value converting
+let label = "The width is "
+let width = 94
+let widthLabel = label + String(width)
+print(widthLabel)
+
+//005. String interpolation
+let apples = 3
+let oranges = 5
+let appleSummary = "I have \(apples) apples."
+let fruitSummary = "I have \(apples + oranges) pieces of fruit."
+print(appleSummary)
+print(fruitSummary)
+
+//006. Array and dictionaries
+var shoppingList = ["catfish", "water", "tulips"]
+shoppingList[1] = "bottle of water"
+
+var occupations = [
+    "Malcolm": "Captain",
+    "Kaylee": "Mechanic",
+]
+occupations["Jayne"] = "Public Relations"
+print(shoppingList)
+print(occupations)
+
+//007. Add element to array
+shoppingList.append("blue paint")
+print(shoppingList)
+
+//008. Create empty array and dictionary
+let emptyArray = [String]()
+let emptyDictionary = [String: Float]()
+
+//009. Create empty inferred array and dictionary
+shoppingList = []
+occupations = [:]</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>756AB871-CCFE-432A-9E6E-03AFCD9CBE36</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>All tasks for simple values part</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>All basic-simple-values: all tasks in one scope</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

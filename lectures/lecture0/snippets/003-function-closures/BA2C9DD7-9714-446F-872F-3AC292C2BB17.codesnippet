@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function 002</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//002. Function with no argument label
+func greet(_ person: String, on day: String) -&gt; String {
+    return "Hello \(person), today is \(day)."
+}
+greet(&lt;#"John"#&gt;, on: &lt;#"Wednesday"#&gt;)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>BA2C9DD7-9714-446F-872F-3AC292C2BB17</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create function with no argument label</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>002 basic-function-closures: function with no argument label</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic simple 003</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//003. Inferior type OR Implict and explicit
+let implicitInteger = &lt;#70#&gt;
+let implicitDouble = &lt;#70.0#&gt;
+let explicitDouble: Double = &lt;#70#&gt;
+print(implicitInteger)
+print(explicitDouble)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>24F26F25-1E34-41FA-9071-0877567886AD</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create two varibales as implict and explicit int and double</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>003 basic-simple-values: implict and explicit</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function 003</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//003. Function with tuple as return value
+func calculateStatistics(scores: [Int]) -&gt; (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score &gt; max {
+            max = score
+        } else if score &lt; min {
+            min = score
+        }
+        sum += score
+    }
+    
+    return (min, max, sum)
+}
+let statistics = calculateStatistics(scores: [&lt;#5#&gt;, &lt;#3#&gt;, &lt;#100#&gt;, &lt;#3#&gt;, &lt;#9#&gt;])
+print(statistics.sum)
+print(statistics.2)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>28C653E4-02BA-406D-91E5-7F8B799B361F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create simple function with tuple as return value</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>003 basic-function-closures: function with tuple</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

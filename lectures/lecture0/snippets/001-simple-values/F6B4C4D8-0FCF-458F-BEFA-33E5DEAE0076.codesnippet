@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic simple 008</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//008. Create empty array and dictionary
+let emptyArray = [&lt;#String#&gt;]()
+let emptyDictionary = [&lt;#String#&gt;: &lt;#Float#&gt;]()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>F6B4C4D8-0FCF-458F-BEFA-33E5DEAE0076</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create empty array and empty dictionary as String</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>008 basic-simple-values: create empty array and dictionary</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
