@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function 009</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//009. Parameter to parameter by number
+let sortedNumbers = numbers.sorted { &lt;#$0#&gt; &gt; &lt;#$1#&gt; }
+print(sortedNumbers)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8EEF151A-1364-4090-9D2A-2779DB423B01</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Sort number with parameters as numbers</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>009 basic-fucntion-closures: parameter by number</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

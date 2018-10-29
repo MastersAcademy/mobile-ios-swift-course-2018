@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function 004</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//004. Nested functions
+func returnFifteen() -&gt; Int {
+    var y = &lt;#10#&gt;
+    func add() {
+        y += &lt;#5#&gt;
+    }
+    add()
+    return y
+}
+returnFifteen()</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>441EE346-0E88-4469-87BC-96234B47F2FE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create simple function with nested inside it and print result</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>004 basic-function-closures</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

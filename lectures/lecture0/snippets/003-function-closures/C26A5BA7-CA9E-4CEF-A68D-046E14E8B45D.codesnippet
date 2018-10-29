@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function 001</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//001. Simple function
+func greet(person: String, day: String) -&gt; String {
+    return "Hello \(person), today is \(day)."
+}
+greet(person: &lt;#"Bob"#&gt;, day: &lt;#"Tuesday"#&gt;)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C26A5BA7-CA9E-4CEF-A68D-046E14E8B45D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Declare simple function with two parameters and return new string</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>001 basic-function-closures: simple function</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>basic function all</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//001. Simple function
+func greet(person: String, day: String) -&gt; String {
+    return "Hello \(person), today is \(day)."
+}
+greet(person: "Bob", day: "Tuesday")
+
+//002. Function with no argument label
+func greet(_ person: String, on day: String) -&gt; String {
+    return "Hello \(person), today is \(day)."
+}
+greet("John", on: "Wednesday")
+
+//003. Function with tuple as return value
+func calculateStatistics(scores: [Int]) -&gt; (min: Int, max: Int, sum: Int) {
+    var min = scores[0]
+    var max = scores[0]
+    var sum = 0
+    
+    for score in scores {
+        if score &gt; max {
+            max = score
+        } else if score &lt; min {
+            min = score
+        }
+        sum += score
+    }
+    
+    return (min, max, sum)
+}
+let statistics = calculateStatistics(scores: [5, 3, 100, 3, 9])
+print(statistics.sum)
+print(statistics.2)
+
+//004. Nested functions
+func returnFifteen() -&gt; Int {
+    var y = 10
+    func add() {
+        y += 5
+    }
+    add()
+    return y
+}
+returnFifteen()
+
+//005. Function as return value
+func makeIncrementer() -&gt; ((Int) -&gt; Int) {
+    func addOne(number: Int) -&gt; Int {
+        return 1 + number
+    }
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+
+//006. Function as argument
+func hasAnyMatches(list: [Int], condition: (Int) -&gt; Bool) -&gt; Bool {
+    for item in list {
+        if condition(item) {
+            return true
+        }
+    }
+    return false
+}
+func lessThanTen(number: Int) -&gt; Bool {
+    return number &lt; 10
+}
+var numbers = [20, 19, 7, 12]
+hasAnyMatches(list: numbers, condition: lessThanTen)
+
+//007. Simple closures
+numbers.map({ (number: Int) -&gt; Int in
+    let result = 3 * number
+    return result
+})
+
+//008. Ommit type of function parameter
+let mappedNumbers = numbers.map({ number in 3 * number })
+print(mappedNumbers)
+
+//009. Parameter to parameter by number
+let sortedNumbers = numbers.sorted { $0 &gt; $1 }
+print(sortedNumbers)</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>62C39752-681A-4540-BDF4-2A18E8DFCE7F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Create all need info for function closures</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>all basic-function-closures</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
