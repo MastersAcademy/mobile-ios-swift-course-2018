@@ -30,14 +30,14 @@ while (i <= 10) {
 }
 
     //while-repeat
-//i = 1
+i = 1
 repeat {
     print(i)
     i += 1
 } while (i <= 10)
 
     //for
-//i = 1
+i = 1
 for i in 1...10 {
     print(i)
 }
@@ -65,7 +65,7 @@ default:
 }
 
 //Написать любой код который приведет к крешу playground-а (выводу error: Execution was interrupted \ Fatal error). Ключевые слова: crash, stack trac, program termination, fatal error, swift
-//let x = 0, y = x/x
+let x = 0, y = x/x
 
 //Напишите самый короткий код который приведет к крешу playground-а
-//+
++
