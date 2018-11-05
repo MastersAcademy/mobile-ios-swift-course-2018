@@ -2,6 +2,10 @@ import UIKit
 
 // MARK: Task 011
 
+exit(0)
+
+abort()
+
 var a = Int(readLine()!)
 
 var b: Int = Int("a")!
