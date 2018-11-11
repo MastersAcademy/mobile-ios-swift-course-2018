@@ -51,15 +51,20 @@ enum Rank: Int {
         }
     }
     
-    func compareTo(rank: Rank) -> Int {
-        let selfValue = self == .ace ? 14 : self.rawValue
-        let rankValue = rank == .ace ? 14 : rank.rawValue
-        return selfValue - rankValue
+    func compareTo(rank: Rank) -> ComparisonResult {
+        let value = self.rawValue - rank.rawValue
+        return ComparisonResult.init(rawValue: value.signum())!
     }
 }
+
 Rank.ace.compareTo(rank: .king)
 Rank.six.compareTo(rank: .eight)
+Rank.nine.compareTo(rank: .ace)
+Rank.ten.compareTo(rank: .ten)
 
+print(ComparisonResult.orderedAscending.rawValue)
+print(ComparisonResult.orderedSame.rawValue)
+print(ComparisonResult.orderedDescending.rawValue)
 
 enum Suit {
     case spades, hearts, diamonds, clubs
