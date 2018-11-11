@@ -56,7 +56,7 @@ class Circle: NamedShape{
         
     }
     func area() -> Double {
-        return 2 * radius * Double.pi
+        return Double.pi * pow(radius, 2)
     }
     override func simpleDescription() -> String {
         return "Radius: \(radius) and area: \(area())"
@@ -91,7 +91,7 @@ enum Rank: Int {
 }
 
 // 2.1
-func rankCompare1(r1: Rank, r2: Rank) -> Bool{
+func isRank(_ r1: Rank, r2: Rank) -> Bool{
     return r1.rawValue > r2.rawValue
 }
 func rankCompare2(r1: Rank, r2: Rank) -> Int{
@@ -141,11 +141,11 @@ func fullDeckOfCards() -> [Card]{
     let arrSuits = [Suit.clubs,.diamonds,.hearts,.spades]
     var n = 1
     var arrCards = [Card]()
-    for suits in arrSuits{
-        while let rank = Rank.init(rawValue: n) {
+    while let rank = Rank.init(rawValue: n) {
+        for suits in arrSuits{
             arrCards.append(Card(rank: rank, suit: suits))
-            n += 1
         }
+         n += 1
     }
     return arrCards
 }
@@ -153,8 +153,8 @@ func fullDeckOfCards() -> [Card]{
 // Task 3
 struct Command{
     var message: String
-    func execute() -> String {
-        return "Command message: \(message)"
+    func execute() {
+        print("Message: \(message)")
     }
 }
 
