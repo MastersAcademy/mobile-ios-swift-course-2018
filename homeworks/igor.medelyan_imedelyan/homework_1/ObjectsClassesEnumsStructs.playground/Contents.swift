@@ -30,7 +30,7 @@ class Circle: NamedShape {
     }
     
     func area() -> Double {
-        return 2 * .pi * radius * radius
+        return .pi * radius * radius
     }
     
     override func simpleDescription() -> String {
