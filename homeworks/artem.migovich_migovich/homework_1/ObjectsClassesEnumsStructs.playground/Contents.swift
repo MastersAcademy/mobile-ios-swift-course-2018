@@ -33,9 +33,10 @@ class NamedShape {
 
 NamedShape(name: "Name")
 
-/*Задание №1
-Создайте подкласс Circle класса NamedShape, который принимает радиус и имя в качестве аргументов в их инициализатор. Реализуйте метод area() и метод simpleDescription() класса Circle.
-*/
+/*
+ Задание №1
+ Создайте подкласс Circle класса NamedShape, который принимает радиус и имя в качестве аргументов в их инициализатор. Реализуйте метод area() и метод simpleDescription() класса Circle.
+ */
 
 class Circle: NamedShape {
     var radius: Double
@@ -53,9 +54,11 @@ class Circle: NamedShape {
 let circle = Circle(radius: 5, name: "My circle")
 circle.area()
 circle.simpleDescription()
+
 /*
  Задание №2
 */
+
 enum Rank: Int {
     case ace = 1
     case two, three, four, five, six, seven, eight, nine, ten
@@ -74,15 +77,6 @@ enum Rank: Int {
         default:
             return String(self.rawValue)
         }
-    }
-    var allCases: [Rank] {
-        var values: [Rank] = []
-        var index = 1
-        while let element = self.init(rawValue: index) {
-            values.append(element)
-            index += 1
-        }
-        return values
     }
 }
 
@@ -142,33 +136,27 @@ enum Suit {
                 return .red
             }
         }
-        var allCases: [Suit] {
-            var values: [Suit] = []
-            var index = 1
-            while let element = self.init(rawValue: index) {
-                values.append(element)
-                index += 1
-            }
-            return values
-        }
     }
 }
-
 
 let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
 
 // 3) Добавьте метод для Card, который бы создал полную колоду карт, с одной картой из каждой комбинации ранга (rank) и масти (suit).
+
+extension Rank: CaseIterable {}
+extension Suit: CaseIterable {}
+
 struct Card: Hashable {
     var rank: Rank
     var suit: Suit
     func simpleDescription() -> String {
         return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
     }
-    func cardsDeck() -> Set <Card> {
+    func deck() -> Set <Card> {
         var deck: Set <Card> = []
-        for rank in Rank.allCases {
-            for suit in Suit.allCases {
+        Rank.allCases.forEach { rank in
+            Suit.allCases.forEach { suit in
                 deck.insert(Card(rank: rank, suit: suit))
             }
         }
@@ -177,3 +165,120 @@ struct Card: Hashable {
 }
 let threeOfSpades = Card(rank: .three, suit: .spades)
 let threeOfSpadesDescription = threeOfSpades.simpleDescription()
+
+/*
+ Задание №3
+ В ObjectsClassesEnumsStructs.playground создайте:
+ */
+
+// 1) Струкуру Command с полем message (тип String) и методом execute который в консоль выведет значение поля message
+
+struct Command {
+    var message: String
+    func execute() {
+        print(message)
+    }
+}
+
+// 2) Перечисление Mode с кейсами idle, work, error
+
+enum Mode {
+    case idle, work, error
+}
+
+/*
+ 3) Класс Robot с
+ полями mode (тип Mode), commands (тип массив Command)
+ инициализатором с одним аргументом устанавливающим поле commands, и присваивающий полю mode значение idle
+ методом start, который в случае, если массив commands пуст, устанавливает в mode значение error, в ином же случае устанавливает в mode значение work
+ методом go, который в случае,
+ если полю mode присвоено значение idle, выведет в консоль "robot is off",
+ если work - "robot is working" и при этом вызовет метод execute у каждого элемента из массива commands,
+ если error - "robot is broken"
+ */
+
+class Robot {
+    var mode: Mode
+    let commands: [Command]
+    
+    init(commands: [Command]) {
+        self.commands = commands
+        self.mode = .idle
+    }
+    
+    func start() {
+        mode = commands.isEmpty ? .error : .work
+    }
+    
+    func go() {
+        switch mode {
+        case .idle:
+            print("robot is off")
+        case .work:
+            print("robot is working")
+            commands.forEach {commands in commands.execute()}
+        case .error:
+            print("robot is broken")
+        }
+    }
+}
+
+/*
+ 4) Несколько (3-5) подклассов класса Robot с инициализатором не принимающим аргументов, но передающим массив нескольких (3-5) стуктур Command в инициализатор класса-родителя.
+ 5) По одному экземпляру из подклассов класса Robot и вызовите у них методы go, start в таком порядке, чтобы роботы успешно справились с выполнением своих Command-заданий.
+ */
+
+class Terminator: Robot {
+    init() {
+        super.init(commands: [Command(message: "Find Sarah J. Connor"),
+                              Command(message: "Kill Sarah J. Connor"),
+                              Command(message: "Get back to the future")])
+    }
+}
+
+let terminator = Terminator()
+terminator.start()
+terminator.go()
+
+class CoffeMachine: Robot {
+    init() {
+        super.init(commands: [Command(message: "Malfunction testing"),
+                              Command(message: "Grinding coffee beans"),
+                              Command(message: "Making coffee")])
+    }
+}
+
+let coffeMachine = CoffeMachine()
+coffeMachine.start()
+coffeMachine.go()
+
+class RoboticVacuumCleaner: Robot {
+    init() {
+        super.init(commands: [Command(message: "Find garbage"),
+                              Command(message: "Suck it up"),
+                              Command(message: "Repeat")])
+    }
+}
+
+let vacuumCleaner = RoboticVacuumCleaner()
+vacuumCleaner.start()
+vacuumCleaner.go()
+
+/*
+ 6) Подкласс класса Robot, вызов метода go у которого выведет в консоль "robot is broken".
+ 7) Экземпляр вышеупомянутого класса и вызовите у него методы для вывода в консоль "robot is broken".
+ */
+
+class SimpleRobot: Robot {
+    init() {
+        super.init(commands: [])
+    }
+}
+
+let simpleRobot = SimpleRobot()
+simpleRobot.start()
+simpleRobot.go()
+
+
+
+
