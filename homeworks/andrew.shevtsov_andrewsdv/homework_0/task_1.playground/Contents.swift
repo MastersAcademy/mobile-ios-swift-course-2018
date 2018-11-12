@@ -73,3 +73,28 @@ repeat {
     print(index)
     index += 1
 } while index <= 10
+
+
+// Task 001. Subtask 4.
+print("Task 001. Subtask 4.")
+
+var emptyString = String()
+var string2 = String("string2")
+var string3 = String.init()
+var string4 = "string4"
+var string5: String = "string5"
+var string6 = 123.description
+var string7 = String(repeating: "abc", count: 5)
+
+
+// Task 001. Subtask 5.
+print("Task 001. Subtask 5.")
+
+var value: Int = 36
+switch value {
+case 5...20, 36...:
+    print(value)
+default:
+    print()
+    // Nothing to do in this case
+}
