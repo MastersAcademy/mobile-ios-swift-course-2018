@@ -1,7 +1,7 @@
 import UIKit
 
 
-
+// Task 001. Subtask 1,2.
 print("Task 001. Subtask 1,2.")
 
 
@@ -51,7 +51,25 @@ let tuple = (min: Int8.min, max: Int8.max)
 print(tuple)
 
 
-print("Task 001. Subtask 3")
+// Task 001. Subtask 3.
+print("Task 001. Subtask 3.")
 
 
+print("'for' loop")
+for index in 1...10 {
+    print(index)
+}
 
+print("'while' loop")
+var index = 1
+while index <= 10 {
+    print(index)
+    index += 1
+}
+
+print("while-repeat")
+index = 1
+repeat {
+    print(index)
+    index += 1
+} while index <= 10
