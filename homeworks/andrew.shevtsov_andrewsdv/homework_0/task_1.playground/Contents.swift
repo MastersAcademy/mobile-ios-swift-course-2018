@@ -98,3 +98,11 @@ default:
     print()
     // Nothing to do in this case
 }
+
+// Task 001. Subtask 6.
+print("Task 001. Subtask 6.")
+var data = ["1", "2"]
+print(data[4])
+
+
+var error: String = nil!
