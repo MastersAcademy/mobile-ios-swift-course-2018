@@ -88,7 +88,7 @@ struct Card {
     func simpleDescription() -> String {
         return "The \(rank.simpleDescription()) of \(suit.simpleDescription())"
     }
-    func deck() -> [Card] {
+    static func deck() -> [Card] {
         var deck = [Card]()
         Rank.allCases.forEach { rank in
             Suit.allCases.forEach { suit in
