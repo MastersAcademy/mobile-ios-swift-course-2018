@@ -50,7 +50,7 @@ enum Rank: Int {
         }
     }
     func compare(_ rank1: Rank, higherThan rank2: Rank) -> Bool {
-        return rank1.rawValue == rank2.rawValue
+        return rank1.rawValue > rank2.rawValue
     }
 }
 
