@@ -91,8 +91,8 @@ enum Rank: Int {
 }
 
 // 2.1
-func isRank(_ r1: Rank, r2: Rank) -> Bool{
-    return r1.rawValue > r2.rawValue
+func isRank(_ r1: Rank, higherThan: Rank) -> Bool{
+    return r1.rawValue > higherThan.rawValue
 }
 func rankCompare2(r1: Rank, r2: Rank) -> Int{
     if r1.rawValue > r2.rawValue{
