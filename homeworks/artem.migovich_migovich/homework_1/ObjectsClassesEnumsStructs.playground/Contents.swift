@@ -128,19 +128,20 @@ enum Suit {
         case .clubs:
             return "clubs"
         }
-        func color() -> UIColor {
-            switch self {
-            case .spades, .clubs:
-                return .black
-            case .hearts, .diamonds:
-                return .red
-            }
+    }
+    func color() -> UIColor {
+        switch self {
+        case .spades, .clubs:
+            return .black
+        case .hearts, .diamonds:
+            return .red
         }
     }
 }
 
 let hearts = Suit.hearts
 let heartsDescription = hearts.simpleDescription()
+print(hearts.color().cgColor)
 
 // 3) Добавьте метод для Card, который бы создал полную колоду карт, с одной картой из каждой комбинации ранга (rank) и масти (suit).
 
