@@ -95,7 +95,7 @@ switch value {
 case 5...20, 36...:
     print(value)
 default:
-    print()
+    break
     // Nothing to do in this case
 }
 
