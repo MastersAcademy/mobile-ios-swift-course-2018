@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         flipCount = 0
-        cards = cards.shuffled()
+        cards.shuffle()
     }
     
     // MARK: IBAction
