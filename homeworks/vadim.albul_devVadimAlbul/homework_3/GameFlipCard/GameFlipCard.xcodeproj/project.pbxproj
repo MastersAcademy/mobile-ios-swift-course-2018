@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D7A4D88C21A6CA6E0093C21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D88B21A6CA6E0093C21F /* AppDelegate.swift */; };
 		D7A4D88E21A6CA6E0093C21F /* GFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */; };
-		D7A4D89121A6CA6E0093C21F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D88F21A6CA6E0093C21F /* Main.storyboard */; };
 		D7A4D89321A6CA6F0093C21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D89221A6CA6F0093C21F /* Assets.xcassets */; };
 		D7A4D89621A6CA6F0093C21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D89421A6CA6F0093C21F /* LaunchScreen.storyboard */; };
 		D7A4D8A321A6EC140093C21F /* GFCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D8A221A6EC140093C21F /* GFCardModel.swift */; };
@@ -19,7 +18,6 @@
 		D7A4D88821A6CA6E0093C21F /* GameFlipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameFlipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A4D88B21A6CA6E0093C21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFMainViewController.swift; sourceTree = "<group>"; };
-		D7A4D89021A6CA6E0093C21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A4D89221A6CA6F0093C21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A4D89521A6CA6F0093C21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7A4D89721A6CA6F0093C21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,7 +91,6 @@
 		D7A4D8A021A6CB160093C21F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D7A4D88F21A6CA6E0093C21F /* Main.storyboard */,
 				D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */,
 			);
 			path = Main;
@@ -167,7 +164,6 @@
 			files = (
 				D7A4D89621A6CA6F0093C21F /* LaunchScreen.storyboard in Resources */,
 				D7A4D89321A6CA6F0093C21F /* Assets.xcassets in Resources */,
-				D7A4D89121A6CA6E0093C21F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,14 +183,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D7A4D88F21A6CA6E0093C21F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D7A4D89021A6CA6E0093C21F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D7A4D89421A6CA6F0093C21F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -328,6 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/GameFlipCard/Apllication/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -345,6 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/GameFlipCard/Apllication/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

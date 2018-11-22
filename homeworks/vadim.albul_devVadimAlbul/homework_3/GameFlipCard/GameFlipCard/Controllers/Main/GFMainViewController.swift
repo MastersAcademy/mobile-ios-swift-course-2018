@@ -28,6 +28,7 @@ class GFMainViewController: UIViewController {
         flipCount = 0
     }
     
+    @available(iOS 11.0, *)
     override func viewSafeAreaInsetsDidChange() {
         super.viewSafeAreaInsetsDidChange()
         setRectContent()
@@ -39,6 +40,14 @@ class GFMainViewController: UIViewController {
         setupFlipLabel()
         setupCardsCollection()
         setRectContent()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setNeedsStatusBarAppearanceUpdate()
+    }
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
     
     fileprivate func setupFlipLabel() {
@@ -69,7 +78,9 @@ class GFMainViewController: UIViewController {
     func setRectContent() {
         let screenBounds = UIScreen.main.bounds
         var areaInsets: UIEdgeInsets = .zero
-        areaInsets = self.view.safeAreaInsets
+        if #available(iOS 11.0, *) {
+            areaInsets = self.view.safeAreaInsets
+        }
        
         let labelWidth = screenBounds.width - (marginRow*2) - areaInsets.left - areaInsets.right
         let heightLabel: CGFloat = max(60, min(labelWidth * 0.25,100))
@@ -85,7 +96,6 @@ class GFMainViewController: UIViewController {
             let positionX = screenBounds.minX + areaInsets.left + (CGFloat(row) * card.size.width) + (CGFloat(row+1) * marginRow)
             let positionY = screenBounds.minY + areaInsets.top + (CGFloat(section) * card.size.height) + (CGFloat(section+1) * marginSection)
             card.updatePosition(CGPoint(x: positionX, y: positionY))
-            print(section, row, CGPoint(x: positionX, y: positionY))
             row += 1
         }
         self.view.layoutIfNeeded()
