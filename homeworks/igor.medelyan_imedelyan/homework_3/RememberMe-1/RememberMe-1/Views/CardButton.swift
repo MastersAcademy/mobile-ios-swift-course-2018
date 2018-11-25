@@ -10,10 +10,10 @@ import UIKit
 
 class CardButton: UIButton {
 
-    func updateWithCard(_ card: Card) {
-        switch card.state {
+    func update(with model: Card) {
+        switch model.state {
         case .suit:
-            setTitle(card.emoji, for: .normal)
+            setTitle(model.emoji, for: .normal)
             backgroundColor = .white
         case .shirt:
             setTitle("", for: .normal)

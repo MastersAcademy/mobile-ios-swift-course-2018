@@ -10,8 +10,8 @@ import Foundation
 
 class Card {
     
-    var emoji: String
-    var isUpBySuit: Bool
+    let emoji: String
+    private(set) var isUpBySuit: Bool
     
     init(emoji: String, isUpBySuit: Bool = false) {
         self.emoji = emoji
@@ -19,12 +19,6 @@ class Card {
     }
     
     func flip() {
-        isUpBySuit = !isUpBySuit
-    }
-}
-
-extension Card: Equatable {
-    static func == (lhs: Card, rhs: Card) -> Bool {
-        return lhs.emoji == rhs.emoji
+        isUpBySuit.toggle()
     }
 }

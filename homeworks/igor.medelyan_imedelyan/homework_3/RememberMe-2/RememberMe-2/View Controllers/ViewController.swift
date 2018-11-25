@@ -17,6 +17,8 @@ class ViewController: UIViewController {
                          Card(emoji: "🤡"),
                          Card(emoji: "😻")]
     
+    var cardButtons: [CardButton] = []
+    
     var cardSize: CGSize {
         let cardRows = CGFloat(round(Double(cards.count / 2)))
         let padding: CGFloat = 50.0
@@ -43,11 +45,12 @@ class ViewController: UIViewController {
     
     // MARK: - UI setup
     func setupButtons() {
-        for (index, card) in cards.enumerated() {
+        for (index, _) in cards.enumerated() {
             let frame = CGRect(origin: pointForCard(at: index), size: cardSize)
-            let button = CardButton(card: card, frame: frame)
+            let button = CardButton(frame: frame)
             button.addTarget(self, action: #selector(touchCard), for: .touchUpInside)
             view.addSubview(button)
+            cardButtons.append(button)
         }
     }
     
@@ -68,8 +71,10 @@ class ViewController: UIViewController {
     // MARK: - Button actions
     @objc func touchCard(_ sender: CardButton) {
         flipsCount += 1
-        sender.card.flip()
-        sender.updateViewWithAnimation()
+        guard let cardIndex = cardButtons.index(of: sender), cards.indices.contains(cardIndex) else { return }
+        let card = cards[cardIndex]
+        card.flip()
+        sender.update(with: card)
     }
     
     // MARK: - Helper methods

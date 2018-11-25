@@ -10,15 +10,15 @@ import Foundation
 
 class Card {
     
-    enum CardState {
+    enum State {
         case suit
         case shirt
     }
     
-    var emoji: String
-    var state: CardState
+    let emoji: String
+    var state: State
     
-    init(emoji: String, state: CardState = .shirt) {
+    init(emoji: String, state: State = .shirt) {
         self.emoji = emoji
         self.state = state
     }
