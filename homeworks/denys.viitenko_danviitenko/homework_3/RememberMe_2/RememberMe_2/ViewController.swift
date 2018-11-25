@@ -10,9 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    let flipCountLabel: UILabel! = UILabel()
+    let flipCountLabel: UILabel = UILabel()
     
-    var butttons: [UIButton] = [UIButton(frame: CGRect(x: 94, y: 79, width: 90, height: 122)), UIButton(frame: CGRect(x: 229, y: 79, width: 90, height: 122)), UIButton(frame: CGRect(x: 94, y: 240, width: 90, height: 122)), UIButton(frame: CGRect(x: 229, y: 240, width: 90, height: 122))]
+    var buttons: [UIButton] = [UIButton(frame: CGRect(x: 94, y: 79, width: 90, height: 122)), UIButton(frame: CGRect(x: 229, y: 79, width: 90, height: 122)), UIButton(frame: CGRect(x: 94, y: 240, width: 90, height: 122)), UIButton(frame: CGRect(x: 229, y: 240, width: 90, height: 122))]
     
     var flipsCount = 0 {
         didSet {
@@ -22,20 +22,20 @@ class ViewController: UIViewController {
     
     func addLabel(){
         flipCountLabel.frame = CGRect(x: 108, y: 580, width: 199, height: 110)
-        flipCountLabel.backgroundColor = UIColor.orange
+        flipCountLabel.backgroundColor = .orange
         flipCountLabel.textAlignment = .center
         flipCountLabel.text = "Flips"
-        flipCountLabel.font = UIFont.boldSystemFont(ofSize: 30)
+        flipCountLabel.font = .boldSystemFont(ofSize: 30)
         
-        self.view.addSubview(flipCountLabel)
+        view.addSubview(flipCountLabel)
     }
     func addButtons(){
-        for a in butttons {
-            a.backgroundColor = UIColor.orange
-            a.titleLabel?.text = ""
-            a.addTarget(self, action: #selector(touchCard), for: .touchUpInside)
+        for button in buttons {
+            button.backgroundColor = .orange
+            button.titleLabel?.text = ""
+            button.addTarget(self, action: #selector(touchCard), for: .touchUpInside)
             
-            self.view.addSubview(a)
+            view.addSubview(button)
             
         }
     }
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
     
     @objc func touchCard(_ sender: UIButton){
         flipsCount += 1
-        if let cardNumber = butttons.index(of: sender),
+        if let cardNumber = buttons.index(of: sender),
             emojiChoices.indices.contains(cardNumber){
             flipCard(withEmoji: emojiChoices[cardNumber], on: sender)
         } else {
