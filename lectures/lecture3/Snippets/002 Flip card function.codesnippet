@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>002 remember me</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func flipCard(withEmoji emoji: String, on button: UIButton) {
+    if button.currentTitle == emoji {
+            button.setTitle("", for: .normal)
+        button.backgroundColor = &lt;#.orange#&gt;
+        } else {
+            button.setTitle(emoji, for: .normal)
+        button.backgroundColor = &lt;#.white#&gt;
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3F3BDEBF-856A-490D-B7E3-B132DC2CE6F3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Simple flip card function with emoji and button as parametr</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>002 Flip card function</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
