@@ -8,20 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		D7A4D88C21A6CA6E0093C21F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D88B21A6CA6E0093C21F /* AppDelegate.swift */; };
-		D7A4D88E21A6CA6E0093C21F /* GFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */; };
+		D7A4D88E21A6CA6E0093C21F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D88D21A6CA6E0093C21F /* MainViewController.swift */; };
 		D7A4D89321A6CA6F0093C21F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D89221A6CA6F0093C21F /* Assets.xcassets */; };
 		D7A4D89621A6CA6F0093C21F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A4D89421A6CA6F0093C21F /* LaunchScreen.storyboard */; };
-		D7A4D8A321A6EC140093C21F /* GFCardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D8A221A6EC140093C21F /* GFCardModel.swift */; };
+		D7A4D8A321A6EC140093C21F /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A4D8A221A6EC140093C21F /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D7A4D88821A6CA6E0093C21F /* GameFlipCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameFlipCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A4D88B21A6CA6E0093C21F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFMainViewController.swift; sourceTree = "<group>"; };
+		D7A4D88D21A6CA6E0093C21F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D7A4D89221A6CA6F0093C21F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D7A4D89521A6CA6F0093C21F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7A4D89721A6CA6F0093C21F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7A4D8A221A6EC140093C21F /* GFCardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFCardModel.swift; sourceTree = "<group>"; };
+		D7A4D8A221A6EC140093C21F /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				D7A4D89D21A6CACF0093C21F /* Apllication */,
+				D7A4D89E21A6CAE20093C21F /* Controllers */,
 				D7A4D8A121A6EBC80093C21F /* Models */,
 				D7A4D89F21A6CAF80093C21F /* Resource */,
-				D7A4D89E21A6CAE20093C21F /* Controllers */,
 				D7A4D89421A6CA6F0093C21F /* LaunchScreen.storyboard */,
 			);
 			path = GameFlipCard;
@@ -91,7 +91,7 @@
 		D7A4D8A021A6CB160093C21F /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				D7A4D88D21A6CA6E0093C21F /* GFMainViewController.swift */,
+				D7A4D88D21A6CA6E0093C21F /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -99,7 +99,7 @@
 		D7A4D8A121A6EBC80093C21F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D7A4D8A221A6EC140093C21F /* GFCardModel.swift */,
+				D7A4D8A221A6EC140093C21F /* CardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -174,9 +174,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A4D88E21A6CA6E0093C21F /* GFMainViewController.swift in Sources */,
+				D7A4D88E21A6CA6E0093C21F /* MainViewController.swift in Sources */,
 				D7A4D88C21A6CA6E0093C21F /* AppDelegate.swift in Sources */,
-				D7A4D8A321A6EC140093C21F /* GFCardModel.swift in Sources */,
+				D7A4D8A321A6EC140093C21F /* CardModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
