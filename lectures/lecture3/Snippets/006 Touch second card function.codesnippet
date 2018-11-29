@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>006 remember me</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@IBAction func touchSecondCard(_ sender: UIButton) {
+    flipsCount += &lt;#1#&gt;
+    flipCountLabel.text = "&lt;#Flips#&gt;: \(&lt;#flipsCount#&gt;)"
+    flipCard(withEmoji: "&lt;#🎃#&gt;", on: sender)
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>6750C050-8939-4A80-A004-80239F90A096</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Simple touch second card function that increase by 1 flip counter</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>006 Touch second card function</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
