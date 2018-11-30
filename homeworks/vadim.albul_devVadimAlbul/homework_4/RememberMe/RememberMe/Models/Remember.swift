@@ -23,6 +23,12 @@ class Remember: NSObject {
     @objc dynamic var score: Int = 0
     @objc dynamic var flips: Int = 0
     private let properties: GameProperties = .default
+    var isGameEnded: Bool {
+        if !cards.isEmpty {
+            return cards.filter({!$0.isMatched}).isEmpty
+        }
+        return false
+    }
     
     var indexOfOneAndOnlyFaceUpCard: Int?
     
@@ -55,7 +61,6 @@ class Remember: NSObject {
                 cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = index
             }
-            
         }
     }
     
@@ -67,4 +72,6 @@ class Remember: NSObject {
         score = 0
         cards.shuffle()
     }
+    
+   
 }
