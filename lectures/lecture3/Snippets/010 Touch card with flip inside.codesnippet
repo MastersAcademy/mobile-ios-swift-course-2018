@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>010 remember me</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>@IBAction func touchCard(_ sender: UIButton) {
+    flipsCount += 1
+    if let cardNumber = cardButtons.index(of: sender) {
+        flipCard(withEmoji: emojiChoices[cardNumber],
+                 on: sender)
+    } else {
+        print("Selected card is unknown")
+    }
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>695F6F83-3355-44ED-9477-CAD0966606D0</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Touch card function with flip inside it from selected index</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>010 Touch card with flip inside</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
