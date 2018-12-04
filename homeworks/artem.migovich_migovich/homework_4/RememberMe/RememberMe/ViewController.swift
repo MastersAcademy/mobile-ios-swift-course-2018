@@ -8,17 +8,28 @@
 
 import UIKit
 
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(red: .random(in: 0...1),
+                       green: .random(in: 0...1),
+                       blue: .random(in: 0...1),
+                       alpha: 1.0)
+    }
+}
+
 class ViewController: UIViewController {
 
     lazy var game = Remember(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     
     @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet var newGame: UIButton!
     @IBOutlet var flipCountLabel: UITextField!
-    @IBOutlet weak var newGame: UIButton!
-    @IBOutlet weak var scoreLabel: UITextField!
-    
-    @IBAction func startNewGame(_ sender: UIButton) {
-        game.newGame()
+    @IBOutlet var scoreLabel: UITextField!
+   
+    var score = 0 {
+        didSet {
+            scoreLabel.text = "Score: \(score)"
+        }
     }
     
     var flipsCount = 0 {
@@ -27,8 +38,9 @@ class ViewController: UIViewController {
         }
     }
     
+    var theme = Theme.init(emoji: Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count)), backgroundColor: .random, cardColor: .random)
+    
     @IBAction func touchCard(_ sender: UIButton) {
-        flipsCount += 1
         if let cardNumber = cardButtons.index(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
@@ -43,12 +55,14 @@ class ViewController: UIViewController {
             let card = game.cards[index]
             if card.isFaceUp {
                 button.setTitle(emoji(for: card), for: UIControl.State.normal)
-                button.backgroundColor = .white
+                button.backgroundColor = theme.backgroundColor
             } else {
                 button.setTitle("", for: UIControl.State.normal)
-                button.backgroundColor = card.isMatched ? .clear : .orange
+                button.backgroundColor = card.isMatched ? .clear : theme.cardColor
             }
         }
+        score = game.score
+        flipsCount = game.flips
     }
     
     var emoji = [Int: String]()
@@ -58,27 +72,17 @@ class ViewController: UIViewController {
             let randomIndex = Int.random(in: 0..<emojiChoices.count)
             emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
         }
-        return emoji[card.identifier] ?? "?"
+        return theme.emoji[card.identifier]
     }
     
-    var emojiChoices = ["🍇", "🍉", "🍍", "🍋", "🥐", "🥕", "🥥", "🥗", "🍞"]
+    var emojiChoices = Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count))
     
-    func flipCard(withEmoji emoji: String, on button: UIButton) {
-        if button.currentTitle == emoji {
-            button.setTitle("", for: .normal)
-            button.backgroundColor = UIColorFromHex(rgbValue: 0x00BFFF)
-        } else {
-            button.setTitle(emoji, for: .normal)
-            button.backgroundColor = UIColorFromHex(rgbValue: 0xFFC0CB)
-        }
-    }
-    
-    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-        let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
-        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
+    @IBAction func startNewGame(_ sender: UIButton) {
+        game.newGame()
+        emoji.removeAll()
+        theme = Theme.init(emoji: Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count)), backgroundColor: .random, cardColor: .random)
+        emojiChoices = theme.emoji
+        updateViewFromModel()
     }
     
     override func viewDidLoad() {
@@ -86,4 +90,3 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 }
-
