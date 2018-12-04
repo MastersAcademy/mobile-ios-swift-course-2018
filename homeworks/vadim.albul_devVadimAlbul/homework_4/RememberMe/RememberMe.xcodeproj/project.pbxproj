@@ -16,6 +16,7 @@
 		9253055A21ADAD69003E3876 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9253055921ADAD69003E3876 /* Card.swift */; };
 		D71730E421B12D9B00C36D6F /* StyleCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71730E321B12D9B00C36D6F /* StyleCard.swift */; };
 		D71730E621B12E9B00C36D6F /* ThemeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D71730E521B12E9B00C36D6F /* ThemeCard.swift */; };
+		D7BE9F0221B694B900CCEBD8 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7BE9F0121B694B900CCEBD8 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		9253055921ADAD69003E3876 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		D71730E321B12D9B00C36D6F /* StyleCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleCard.swift; sourceTree = "<group>"; };
 		D71730E521B12E9B00C36D6F /* ThemeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCard.swift; sourceTree = "<group>"; };
+		D7BE9F0121B694B900CCEBD8 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				9206677921A335F600F9247E /* AppDelegate.swift */,
 				9253055621ADACFE003E3876 /* Models */,
 				9255163A21ADF06D0039A1BF /* ViewControllers */,
+				D7BE9F0321B6961900CCEBD8 /* Reusable */,
 				9255163B21ADF0970039A1BF /* SupportFiles */,
 			);
 			path = RememberMe;
@@ -98,6 +101,14 @@
 				9206678521A335F800F9247E /* Info.plist */,
 			);
 			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		D7BE9F0321B6961900CCEBD8 /* Reusable */ = {
+			isa = PBXGroup;
+			children = (
+				D7BE9F0121B694B900CCEBD8 /* Observable.swift */,
+			);
+			path = Reusable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 				9253055821ADAD13003E3876 /* Remember.swift in Sources */,
 				9206677C21A335F600F9247E /* ViewController.swift in Sources */,
 				9206677A21A335F600F9247E /* AppDelegate.swift in Sources */,
+				D7BE9F0221B694B900CCEBD8 /* Observable.swift in Sources */,
 				9253055A21ADAD69003E3876 /* Card.swift in Sources */,
 				D71730E421B12D9B00C36D6F /* StyleCard.swift in Sources */,
 				D71730E621B12E9B00C36D6F /* ThemeCard.swift in Sources */,

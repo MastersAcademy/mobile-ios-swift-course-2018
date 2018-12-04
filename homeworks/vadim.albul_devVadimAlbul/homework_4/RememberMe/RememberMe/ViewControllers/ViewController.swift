@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet var cardButtons: [UIButton]!
     
     // MARK: property
-    var observers = [NSKeyValueObservation]()
+    private var observers = [ObserverProtocol]()
     lazy var game = Remember(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     var cardStyle: StyleCard = ThemeCard.fruits.style
     var emoji = [Int: String]()
@@ -31,30 +31,28 @@ class ViewController: UIViewController {
     // MARK: setup UI items
     func setupObserves() {
         self.observers = [
-            game.observe(\.flips, options: [.initial, .new]) { [weak self] (game, change) in
-                self?.flipCountLabel.text = "Flips: \(game.flips)"
-            },
-            game.observe(\.score, options: [.initial, .new]) { [weak self] (game, change) in
-                self?.scoreCounterLabel.text = "Score: \(game.score)"
-            }
+            game.flips.observeNewAndCall({ [weak self] (value) in
+                self?.flipCountLabel.text = "Flips: \(value)"
+            }),
+            game.score.observeNewAndCall({ [weak self] (value) in
+                self?.scoreCounterLabel.text = "Score: \(value)"
+            })
         ]
     }
     
     // MARK: IBAction
     @IBAction func touchCard(_ sender: UIButton) {
         if let cardNumber = cardButtons.index(of: sender) {
-            let cardBeforeChange = game.cards[cardNumber]
-            guard !cardBeforeChange.isMatched else { return }
             game.chooseCard(at: cardNumber)
+            guard game.isCardFaceChanged else { return }
+            game.isCardFaceChanged = false
             let card = game.cards[cardNumber]
-            if cardBeforeChange.isFaceUp != card.isFaceUp {
+            if !card.isDisabled {
                 flipAnimation(card: card, on: sender) { [weak self] finished in
                     if finished {
                         self?.updateViewFromModel()
                     }
                 }
-            } else {
-                self.updateViewFromModel()
             }
         } else {
             print("Selected card is unknown")
@@ -97,12 +95,6 @@ class ViewController: UIViewController {
     }
     
     private func flipAnimation(card: Card, on button: UIButton, comletion: ((Bool)->Void)? = nil) {
-        if !card.isFaceUp && card.isMatched {
-             comletion?(true)
-            return
-        }
-
-        game.flips += 1
         UIView.transition(with: button,
                           duration: 0.2,
                           options: .transitionFlipFromLeft,
