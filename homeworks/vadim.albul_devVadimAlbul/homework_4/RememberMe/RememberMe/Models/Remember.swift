@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Remember: NSObject {
+class Remember {
     
     struct GameProperties {
         let bonusScore: Int
@@ -20,9 +20,17 @@ class Remember: NSObject {
     }
     
     var cards = [Card]()
-    @objc dynamic var score: Int = 0
-    @objc dynamic var flips: Int = 0
+    var score: Observable<Int> = Observable(0)
+    var flips: Observable<Int> = Observable(0)
+    var isCardFaceChanged: Bool = false
+    
     private let properties: GameProperties = .default
+    var isGameEnded: Bool {
+        if !cards.isEmpty {
+            return cards.filter({!$0.isMatched}).isEmpty
+        }
+        return false
+    }
     
     var indexOfOneAndOnlyFaceUpCard: Int?
     
@@ -35,27 +43,37 @@ class Remember: NSObject {
     }
     
     func chooseCard(at index: Int) {
-        if !cards[index].isMatched {
-            if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
+        guard !cards[index].isMatched else {
+            isCardFaceChanged = false
+            return
+        }
+        
+        if let matchIndex = indexOfOneAndOnlyFaceUpCard {
+            if matchIndex != index {
                 // Verify if cards match
                 if cards[matchIndex].identifier == cards[index].identifier {
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
-                    score += properties.bonusScore
+                    score.value += properties.bonusScore
                 } else {
-                    score -= properties.mistakeScore
+                    score.value -= properties.mistakeScore
                 }
+                flips.value += 1
+                isCardFaceChanged = true
                 cards[index].isFaceUp = true
                 indexOfOneAndOnlyFaceUpCard = nil
             } else {
-                // If no card or two cards face up
-                for flipdownIndex in cards.indices {
-                    cards[flipdownIndex].isFaceUp = false
-                }
-                cards[index].isFaceUp = true
-                indexOfOneAndOnlyFaceUpCard = index
+                isCardFaceChanged = false
             }
-            
+        } else {
+            // If no card or two cards face up
+            for flipdownIndex in cards.indices {
+                cards[flipdownIndex].isFaceUp = false
+            }
+            flips.value += 1
+            isCardFaceChanged = true
+            cards[index].isFaceUp = true
+            indexOfOneAndOnlyFaceUpCard = index
         }
     }
     
@@ -64,7 +82,9 @@ class Remember: NSObject {
             cards[index].isFaceUp = false
             cards[index].isMatched = false
         }
-        score = 0
+        score.value = 0
         cards.shuffle()
     }
+    
+   
 }

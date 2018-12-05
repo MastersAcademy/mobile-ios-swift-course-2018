@@ -12,6 +12,10 @@ struct Card {
     var isFaceUp = false
     var isMatched = false
     var identifier: Int
+
+    var isDisabled: Bool {
+        return !self.isFaceUp && self.isMatched
+    }
     
     static var identifierFactory = 0
     
