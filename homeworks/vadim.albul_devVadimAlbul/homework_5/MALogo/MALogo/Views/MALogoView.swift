@@ -1,42 +1,67 @@
 import UIKit
 
 class MALogoView: UIView {
-
-    var margin: UIEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
-    var lineColor: UIColor = UIColor(red:0.94, green:0.29, blue:0.20, alpha:1.0)
-    var lineWith: CGFloat = 20.0
     
-    override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        drawLogo(self.bounds)
+    struct DrawProperties {
+        let margin: UIEdgeInsets
+        let lineColor: UIColor
+        let lineWith: CGFloat
+        
+        static var `default`: DrawProperties {
+            return DrawProperties(
+                margin: UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5),
+                lineColor: UIColor(red:0.94, green:0.29, blue:0.20, alpha:1.0),
+                lineWith: 20.0
+            )
+        }
     }
     
-    func drawLogo(_ rect: CGRect) {
-        let rectDraw = rect.inset(by: margin)
-
-        let heigthCrown = rectDraw.height * 0.7
-        let path = createLinePath(by: [
-            CGPoint(x: rectDraw.minX + lineWith/2, y: rectDraw.maxY - lineWith/2),
-            CGPoint(x: rectDraw.midX, y: rectDraw.minY + lineWith),
-            CGPoint(x: rectDraw.maxX - lineWith/2, y: rectDraw.maxY - lineWith/2),
-            CGPoint(x: rectDraw.minX + lineWith/2, y: rectDraw.maxY - lineWith/2),
-            CGPoint(x: rectDraw.minX + lineWith/2, y: rectDraw.maxY - heigthCrown),
-            CGPoint(x: rectDraw.midX, y: rectDraw.minY + heigthCrown),
-            CGPoint(x: rectDraw.maxX - lineWith/2, y: rectDraw.maxY - heigthCrown),
-            CGPoint(x: rectDraw.maxX - lineWith/2, y: rectDraw.maxY - lineWith/2)
-            ])
-
+    var properties: DrawProperties = .default
+    private var shapeLayer: CAShapeLayer?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        showLogoAnimation()
+    }
+    
+    func addLayerLogo(_ rect: CGRect) {
+        shapeLayer?.removeFromSuperlayer()
+        
+        let rectDraw = rect.inset(by: properties.margin)
+    
         let mask = CAShapeLayer()
         mask.path = UIBezierPath(rect: rectDraw).cgPath
-
-        let shapelayer = CAShapeLayer()
-        shapelayer.fillColor = UIColor.clear.cgColor
-        shapelayer.strokeColor = lineColor.cgColor
-        shapelayer.lineWidth = lineWith
-        shapelayer.path = path.cgPath
-        shapelayer.mask = mask
+    
+        let layerPath = getLogoLayer(rect: rectDraw)
+        layerPath.mask = mask
         
-        layer.addSublayer(shapelayer)
+        layer.addSublayer(layerPath)
+        shapeLayer = layerPath
+    }
+    
+    private func getLogoLayer(rect: CGRect) -> CAShapeLayer {
+        let lineWith = properties.lineWith
+        let rectPath = rect.insetBy(dx: lineWith/2, dy: lineWith/2)
+        
+        let heigthCrown = rectPath.height * 0.7
+        let path = createLinePath(by: [
+            CGPoint(x: rectPath.minX, y: rectPath.maxY),
+            CGPoint(x: rectPath.midX, y: rectPath.minY + lineWith/2),
+            CGPoint(x: rectPath.maxX, y: rectPath.maxY),
+            CGPoint(x: rectPath.minX, y: rectPath.maxY),
+            CGPoint(x: rectPath.minX, y: rectPath.maxY - heigthCrown),
+            CGPoint(x: rectPath.midX, y: rectPath.minY + heigthCrown),
+            CGPoint(x: rectPath.maxX, y: rectPath.maxY - heigthCrown),
+            CGPoint(x: rectPath.maxX, y: rectPath.maxY)
+        ])
+        
+        let layerPath = CAShapeLayer()
+        layerPath.fillColor = UIColor.clear.cgColor
+        layerPath.strokeColor = properties.lineColor.cgColor
+        layerPath.lineWidth = properties.lineWith
+        layerPath.path = path.cgPath
+    
+        return layerPath
     }
     
     private func createLinePath(by points: [CGPoint]) -> UIBezierPath {
@@ -50,5 +75,20 @@ class MALogoView: UIView {
         }
         path.close()
         return path
+    }
+    
+    func showLogoAnimation() {
+        self.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+        addLayerLogo(self.bounds)
+        
+        let animation = CABasicAnimation(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 3
+        shapeLayer?.add(animation, forKey: "lineAnimation")
+        
+        UIView.animate(withDuration: 1.0, delay: 3.0, animations: {
+            self.transform = CGAffineTransform.identity
+        }, completion: nil)
     }
 }
