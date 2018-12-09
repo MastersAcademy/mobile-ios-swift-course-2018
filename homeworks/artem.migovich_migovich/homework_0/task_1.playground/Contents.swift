@@ -43,7 +43,7 @@ for i in 1...10 {
 }
 
 //Создать экземпляры структуры String наибольшым количеством способом которые сможете придумать (начинайте с String(), искать по ключевым словам initialization, String, swift)
-let str1: String = "Hello Playgroung"
+let str1: String = "Hello Playground"
 let str2: String = """
 Swift is a powerful and intuitive programming language for macOS, iOS, watchOS and tvOS. Writing Swift code is interactive and fun, the syntax is concise yet expressive, and Swift includes modern features developers love. Swift code is safe by design, yet also produces software that runs lightning-fast.
 """
@@ -65,7 +65,5 @@ default:
 }
 
 //Написать любой код который приведет к крешу playground-а (выводу error: Execution was interrupted \ Fatal error). Ключевые слова: crash, stack trac, program termination, fatal error, swift
-let x = 0, y = x/x
+let x = 0/0
 
-//Напишите самый короткий код который приведет к крешу playground-а
-+
