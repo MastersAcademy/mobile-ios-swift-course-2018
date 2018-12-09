@@ -55,5 +55,6 @@ class Remember {
         }
         score = 0
         flips = 0
+        cards.shuffle()
     }
 }

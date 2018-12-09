@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         }
     }
     
-    var theme = Theme.init(emoji: Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count)), backgroundColor: .random, cardColor: .random)
+    var theme = Theme(emoji: Emoji.random().available(), backgroundColor: .random, cardColor: .random)
     
     @IBAction func touchCard(_ sender: UIButton) {
         if let cardNumber = cardButtons.index(of: sender) {
@@ -54,10 +54,10 @@ class ViewController: UIViewController {
             let button = cardButtons[index]
             let card = game.cards[index]
             if card.isFaceUp {
-                button.setTitle(emoji(for: card), for: UIControl.State.normal)
+                button.setTitle(emoji(for: card), for: .normal)
                 button.backgroundColor = theme.backgroundColor
             } else {
-                button.setTitle("", for: UIControl.State.normal)
+                button.setTitle("", for: .normal)
                 button.backgroundColor = card.isMatched ? .clear : theme.cardColor
             }
         }
@@ -75,12 +75,12 @@ class ViewController: UIViewController {
         return theme.emoji[card.identifier]
     }
     
-    var emojiChoices = Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count))
-    
+    var emojiChoices = Emoji.random().available()
+
     @IBAction func startNewGame(_ sender: UIButton) {
         game.newGame()
         emoji.removeAll()
-        theme = Theme.init(emoji: Emoji.getEmoji(name: Int.random(in: 1..<Emoji.allCases.count)), backgroundColor: .random, cardColor: .random)
+        theme = Theme(emoji: Emoji.random().available(), backgroundColor: .random, cardColor: .random)
         emojiChoices = theme.emoji
         updateViewFromModel()
     }

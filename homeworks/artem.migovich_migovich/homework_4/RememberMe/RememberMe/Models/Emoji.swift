@@ -8,31 +8,40 @@
 
 import Foundation
 
-enum Emoji: CaseIterable {
+enum Emoji: Int, CaseIterable {
     
-    case Fruits
-    case Faces
-    case SportGames
-    case Animals
-    case Cars
-    case Food
-        
-    static func getEmoji(name: Int) -> [String] {
-        switch name {
-        case 1:
+    case fruits = 1
+    case faces
+    case sportGames
+    case animals
+    case cars
+    case food
+    
+    func available() -> [String] {
+        switch self {
+        case .fruits:
             return ["🍏", "🍊", "🍋", "🍌", "🍓", "🍒", "🥥", "🍍", "🥝"]
-        case 2:
+        case .faces:
             return ["😁", "🤪", "🥰", "🤓", "😎", "🤩", "🥶", "🤬", "🤢"]
-        case 3:
+        case .sportGames:
             return ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🎱"]
-        case 4:
+        case .animals:
             return ["🐶", "🐹", "🐰", "🦊", "🐻", "🐼", "🐯", "🦁", "🐮"]
-        case 5:
+        case .cars:
             return ["🚗", "🚕", "🚙", "🚌", "🏎", "🚓", "🚑", "🚒", "🚜"]
-        case 6:
+        case .food:
             return ["🥐", "🥩", "🌭", "🍔", "🍟", "🍕", "🥪", "🍣", "🍳"]
         default:
             return ["❤️", "🧡", "💛", "💚", "💙", "💜", "🖤", "💔", "💖"]
         }
+    }
+    
+    static func random() -> Emoji {
+        var rng = SystemRandomNumberGenerator()
+        return Emoji.random(using: &rng)
+    }
+    
+    static func random <T: RandomNumberGenerator> (using generator: inout T) -> Emoji {
+        return allCases.randomElement(using: &generator)!
     }
 }
