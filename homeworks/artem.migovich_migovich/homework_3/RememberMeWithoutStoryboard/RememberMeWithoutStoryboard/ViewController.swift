@@ -8,15 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    func UIColorFromHex(rgbValue:UInt32, alpha:Double=1.0)->UIColor {
-        let red = CGFloat((rgbValue & 0xFF0000) >> 16)/256.0
-        let green = CGFloat((rgbValue & 0xFF00) >> 8)/256.0
-        let blue = CGFloat(rgbValue & 0xFF)/256.0
-        
-        return UIColor(red:red, green:green, blue:blue, alpha:CGFloat(alpha))
+extension UIColor {
+    static func UIColorFromHex(rgbValue: UInt32, alpha: CGFloat = 1.0) -> UIColor {
+        return UIColor(red: CGFloat((rgbValue & 0xFF0000) >> 16)/256.0,
+                       green: CGFloat((rgbValue & 0xFF00) >> 8)/256.0,
+                       blue: CGFloat(rgbValue & 0xFF)/256.0,
+                       alpha: CGFloat(alpha))
     }
+}
+    
+class ViewController: UIViewController {
     
     var card: UIButton!
     var cards = [UIButton]()
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
             button.backgroundColor = .darkGray
         } else {
             button.setTitle(emoji, for: .normal)
-            button.backgroundColor = UIColorFromHex(rgbValue: 0xFFC0CB)
+            button.backgroundColor = .UIColorFromHex(rgbValue: 0xFFC0CB)
         }
     }
     
@@ -70,7 +71,7 @@ class ViewController: UIViewController {
                 card.frame.origin.x += 180
                 }
             }
-            card.addTarget(self, action: #selector(touchCard(_:)), for: UIControl.Event.touchUpInside)
+            card.addTarget(self, action: #selector(touchCard(_:)), for: .touchUpInside)
         }
     }
 
@@ -89,7 +90,7 @@ class ViewController: UIViewController {
         label.textAlignment = NSTextAlignment.center
         label.text = "Flips: "
         label.textColor = .black
-        label.backgroundColor = UIColorFromHex(rgbValue: 0xFFC0CB, alpha: 1)
+        label.backgroundColor = .UIColorFromHex(rgbValue: 0xFFC0CB)
         label.font = UIFont(name: "Helvetica", size: 24)
         self.view.addSubview(label)
         
