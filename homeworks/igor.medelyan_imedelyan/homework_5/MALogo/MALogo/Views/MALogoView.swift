@@ -10,7 +10,9 @@ import UIKit
 
 class MALogoView: UIView {
 
-    override func draw(_ rect: CGRect) {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
         // calculate lines width and padding
         let frameHeight = bounds.height
         let frameWidth = bounds.width
