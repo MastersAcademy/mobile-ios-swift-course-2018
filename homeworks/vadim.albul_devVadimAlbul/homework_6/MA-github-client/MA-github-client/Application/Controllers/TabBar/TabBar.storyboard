@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="468" y="-345"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Custom Navigation Controller-->
         <scene sceneID="yGs-ac-I5j">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oXj-g6-fT1" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oXj-g6-fT1" customClass="CustomNavigationController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="search" id="HcK-P8-ncl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="6nd-9P-JMD">
@@ -145,7 +145,7 @@
         <!--Repositories-->
         <scene sceneID="5sn-0q-YwF">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fPc-ht-xpc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fPc-ht-xpc" customClass="CustomNavigationController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Repositories" image="repositories" id="bIh-h1-hjF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="blackTranslucent" id="5uO-Qq-UB9">
@@ -201,7 +201,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="0Lp-Ps-gBQ">
-                                                <rect key="frame" x="149.5" y="69" width="209.5" height="61.5"/>
+                                                <rect key="frame" x="149.5" y="69" width="209.5" height="58.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hb6-dw-24y">
                                                         <rect key="frame" x="0.0" y="0.0" width="209.5" height="20.5"/>
@@ -210,16 +210,16 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="KAc-Gq-2e7">
-                                                        <rect key="frame" x="0.0" y="28.5" width="209.5" height="24"/>
+                                                        <rect key="frame" x="0.0" y="28.5" width="209.5" height="21"/>
                                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                         <connections>
                                                             <action selector="changedName:" destination="Zlr-tG-py1" eventType="valueChanged" id="fkx-M7-erj"/>
                                                         </connections>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pGw-qt-Ws1">
-                                                        <rect key="frame" x="0.0" y="60.5" width="209.5" height="1"/>
+                                                        <rect key="frame" x="0.0" y="57.5" width="209.5" height="1"/>
                                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" priority="999" constant="1" id="7SV-WJ-Yqr"/>
@@ -228,7 +228,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="L6g-IO-Iwp">
-                                                <rect key="frame" x="16" y="161.5" width="343" height="304.5"/>
+                                                <rect key="frame" x="16" y="161.5" width="343" height="301.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gxU-TH-BV4">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="29.5"/>
@@ -296,7 +296,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-Un-4Rh">
-                                                        <rect key="frame" x="0.0" y="243" width="343" height="61.5"/>
+                                                        <rect key="frame" x="0.0" y="243" width="343" height="58.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="country:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w81-tA-bAl">
                                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="20.5"/>
@@ -305,16 +305,16 @@
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="imM-ou-9g5">
-                                                                <rect key="frame" x="0.0" y="28.5" width="343" height="24"/>
+                                                                <rect key="frame" x="0.0" y="28.5" width="343" height="21"/>
                                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                                 <connections>
                                                                     <action selector="changedCountry:" destination="Zlr-tG-py1" eventType="valueChanged" id="bGb-F7-Tgw"/>
                                                                 </connections>
                                                             </textField>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="COG-9k-08X">
-                                                                <rect key="frame" x="0.0" y="60.5" width="343" height="1"/>
+                                                                <rect key="frame" x="0.0" y="57.5" width="343" height="1"/>
                                                                 <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" priority="999" constant="1" id="dgF-hP-CdQ"/>
