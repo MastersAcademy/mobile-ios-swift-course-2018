@@ -1,6 +1,6 @@
 import UIKit
 
-protocol RepositoryDelegate: AnyObject {
+protocol RepositoryViewDelegate: AnyObject {
     func selectReposiory(with identifier: String, in view: RepositoryView)
 }
 
@@ -14,10 +14,21 @@ class RepositoryView: ViewFromXib {
     
     // MARK: property
     var identifier: String = ""
-    weak var delegate: RepositoryDelegate?
+    weak var delegate: RepositoryViewDelegate?
 
     // MARK: IBAction
     @IBAction func touchContent(_ sender: UIControl) {
         delegate?.selectReposiory(with: identifier, in: self)
+    }
+}
+
+extension RepositoryView {
+    
+    func setContent(repo: ReposytoryPresentation) {
+        lblTitle.text = repo.name
+        lblSubtitle.text = repo.subtitle
+        lblDescription.text = repo.description
+        lblLanguege.text = repo.language
+        identifier = repo.identifier
     }
 }

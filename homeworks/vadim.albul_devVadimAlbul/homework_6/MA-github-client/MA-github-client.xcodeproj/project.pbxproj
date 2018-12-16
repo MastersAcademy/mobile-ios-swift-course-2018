@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		149BC5DE21C63E7F00F1D832 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5DD21C63E7F00F1D832 /* Repository.swift */; };
+		149BC5E021C6499900F1D832 /* RepositoriesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5DF21C6499900F1D832 /* RepositoriesPresentation.swift */; };
+		149BC5E421C6553F00F1D832 /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5E221C6553F00F1D832 /* DetailRepositoryViewController.swift */; };
+		149BC5E521C6553F00F1D832 /* DetailRepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 149BC5E321C6553F00F1D832 /* DetailRepositoryViewController.xib */; };
+		149BC5E721C66CC400F1D832 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5E621C66CC400F1D832 /* SearchViewController.swift */; };
+		149BC5EB21C683F300F1D832 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EA21C683F300F1D832 /* ProfileViewController.swift */; };
+		149BC5ED21C6920000F1D832 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EC21C6920000F1D832 /* UserProfile.swift */; };
+		149BC5EF21C69B4F00F1D832 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EE21C69B4F00F1D832 /* UIImageView+Extension.swift */; };
 		D74F9D7A21C3B37E00C5FA5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F9D7821C3B37E00C5FA5A /* LoginViewController.swift */; };
 		D74F9D7B21C3B37E00C5FA5A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74F9D7921C3B37E00C5FA5A /* LoginViewController.xib */; };
 		D74F9D8121C3B50600C5FA5A /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F9D8021C3B50600C5FA5A /* UIViewController+Extensions.swift */; };
@@ -27,6 +35,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		149BC5DD21C63E7F00F1D832 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		149BC5DF21C6499900F1D832 /* RepositoriesPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresentation.swift; sourceTree = "<group>"; };
+		149BC5E221C6553F00F1D832 /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
+		149BC5E321C6553F00F1D832 /* DetailRepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRepositoryViewController.xib; sourceTree = "<group>"; };
+		149BC5E621C66CC400F1D832 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		149BC5EA21C683F300F1D832 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		149BC5EC21C6920000F1D832 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		149BC5EE21C69B4F00F1D832 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		D74F9D7821C3B37E00C5FA5A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D74F9D7921C3B37E00C5FA5A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		D74F9D8021C3B50600C5FA5A /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
@@ -59,6 +75,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		149BC5E121C653AD00F1D832 /* DetailRepository */ = {
+			isa = PBXGroup;
+			children = (
+				149BC5E221C6553F00F1D832 /* DetailRepositoryViewController.swift */,
+				149BC5E321C6553F00F1D832 /* DetailRepositoryViewController.xib */,
+			);
+			path = DetailRepository;
+			sourceTree = "<group>";
+		};
+		149BC5E821C66CFD00F1D832 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				149BC5E621C66CC400F1D832 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		149BC5E921C683DA00F1D832 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				149BC5EA21C683F300F1D832 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		D74F9D7721C3B36000C5FA5A /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +121,6 @@
 			isa = PBXGroup;
 			children = (
 				D77B549221C397FB00CB3591 /* App */,
-				D74F9D9321C3D73D00C5FA5A /* Views */,
 				D77B549421C3982D00CB3591 /* Controllers */,
 				D74F9D8321C3B56900C5FA5A /* Models */,
 			);
@@ -101,6 +141,7 @@
 			children = (
 				D74F9D9D21C3EF3800C5FA5A /* NSObject+Extension.swift */,
 				D74F9D8021C3B50600C5FA5A /* UIViewController+Extensions.swift */,
+				149BC5EE21C69B4F00F1D832 /* UIImageView+Extension.swift */,
 			);
 			path = Standart;
 			sourceTree = "<group>";
@@ -118,6 +159,9 @@
 			children = (
 				D74F9D8621C3B61200C5FA5A /* Protocol */,
 				D74F9D8921C3B81600C5FA5A /* LoginPresentation.swift */,
+				149BC5DD21C63E7F00F1D832 /* Repository.swift */,
+				149BC5DF21C6499900F1D832 /* RepositoriesPresentation.swift */,
+				149BC5EC21C6920000F1D832 /* UserProfile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -133,6 +177,9 @@
 		D74F9D8B21C3BECE00C5FA5A /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				149BC5E921C683DA00F1D832 /* Profile */,
+				149BC5E821C66CFD00F1D832 /* Search */,
+				149BC5E121C653AD00F1D832 /* DetailRepository */,
 				D74F9D9021C3D42500C5FA5A /* Repositories */,
 				D74F9D8C21C3BEE500C5FA5A /* TabBar.storyboard */,
 			);
@@ -196,6 +243,7 @@
 			isa = PBXGroup;
 			children = (
 				D77B548021C397D700CB3591 /* AppDelegate.swift */,
+				D74F9D9321C3D73D00C5FA5A /* Views */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -283,6 +331,7 @@
 				D74F9D7B21C3B37E00C5FA5A /* LoginViewController.xib in Resources */,
 				D77B548B21C397D900CB3591 /* LaunchScreen.storyboard in Resources */,
 				D77B548821C397D900CB3591 /* Assets.xcassets in Resources */,
+				149BC5E521C6553F00F1D832 /* DetailRepositoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,13 +345,20 @@
 				D74F9D7A21C3B37E00C5FA5A /* LoginViewController.swift in Sources */,
 				D74F9D8521C3B59100C5FA5A /* BasicViewController.swift in Sources */,
 				D74F9D9521C3D79300C5FA5A /* RepositoryView.swift in Sources */,
+				149BC5E021C6499900F1D832 /* RepositoriesPresentation.swift in Sources */,
+				149BC5DE21C63E7F00F1D832 /* Repository.swift in Sources */,
 				D77B548121C397D700CB3591 /* AppDelegate.swift in Sources */,
+				149BC5E421C6553F00F1D832 /* DetailRepositoryViewController.swift in Sources */,
+				149BC5EB21C683F300F1D832 /* ProfileViewController.swift in Sources */,
+				149BC5ED21C6920000F1D832 /* UserProfile.swift in Sources */,
 				D74F9D8821C3B6D700C5FA5A /* BasicPresentation.swift in Sources */,
 				D74F9D9A21C3EECD00C5FA5A /* ControlFromXib.swift in Sources */,
 				D74F9D8121C3B50600C5FA5A /* UIViewController+Extensions.swift in Sources */,
+				149BC5E721C66CC400F1D832 /* SearchViewController.swift in Sources */,
 				D74F9D9221C3D43A00C5FA5A /* RepositoriesViewController.swift in Sources */,
 				D74F9D9B21C3EECD00C5FA5A /* ViewFromXibProtocol.swift in Sources */,
 				D74F9D8A21C3B81600C5FA5A /* LoginPresentation.swift in Sources */,
+				149BC5EF21C69B4F00F1D832 /* UIImageView+Extension.swift in Sources */,
 				D74F9D9C21C3EECD00C5FA5A /* ViewFromXib.swift in Sources */,
 				D74F9D9E21C3EF3800C5FA5A /* NSObject+Extension.swift in Sources */,
 			);
