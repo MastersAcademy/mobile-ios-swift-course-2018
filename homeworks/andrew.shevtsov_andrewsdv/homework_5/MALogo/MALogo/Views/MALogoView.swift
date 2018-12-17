@@ -10,7 +10,7 @@ import UIKit
 
 class MALogoView : UIView {
     
-    override func draw(_ rect: CGRect) {
+    override func awakeFromNib() {
         let viewHeight = bounds.height
         let viewWidth = bounds.width
         let lineThickness = CGFloat(15)
