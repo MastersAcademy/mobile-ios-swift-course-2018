@@ -10,8 +10,8 @@ import Foundation
 import UIKit.UIView
 
 class MALogoView: UIView {
-    override func draw(_ rect: CGRect) {
 
+    override func awakeFromNib() {
         let x = self.bounds.width / 2
         let y = self.bounds.height / 2
         let center: CGPoint = CGPoint(x: x, y: y)
@@ -24,26 +24,26 @@ class MALogoView: UIView {
         logo.addLine(to: CGPoint(x: x * 2 - 100, y: y + 50))
         logo.close()
         logo.move(to: CGPoint(x: 100, y: y + 50))
-        logo.addLine(to: CGPoint(x: x, y: y - 175))
+        logo.addLine(to: CGPoint(x: x, y: y - 150))
         logo.addLine(to: CGPoint(x: x * 2 - 100, y: y + 50))
         UIColor.white.setStroke()
         logo.stroke()
         
         let shapeLayer = CAShapeLayer()
-
+        
         shapeLayer.lineWidth = 15
         shapeLayer.frame = self.layer.bounds
         shapeLayer.path = logo.cgPath
         
         shapeLayer.strokeColor = UIColor.red.cgColor
         shapeLayer.fillColor = UIColor.white.cgColor
- 
+        
         self.layer.addSublayer(shapeLayer)
-
+        
         let strokeEndAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeEndAnimation.fromValue = 0.0
         strokeEndAnimation.toValue = 2.0
-        strokeEndAnimation.duration = 4.0
+        strokeEndAnimation.duration = 3.5
         shapeLayer.add(strokeEndAnimation, forKey: "strokeEndAnimation")
     }
 }
