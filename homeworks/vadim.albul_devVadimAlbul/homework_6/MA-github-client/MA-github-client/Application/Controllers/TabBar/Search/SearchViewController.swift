@@ -14,14 +14,14 @@ class SearchViewController: BasicViewController {
     @IBOutlet weak var contentStackView: UIStackView!
     
     // MARK: property
-    fileprivate var searchController: UISearchController!
-    var repositoryList: [ReposytoryPresentation] = []
-    fileprivate var searchList: [ReposytoryPresentation] = []
-    
-    var searchBarIsEmpty: Bool {
+    private var searchController: UISearchController!
+    private var repositoryList: [ReposytoryPresentation] = []
+    private var searchList: [ReposytoryPresentation] = []
+    private var searchBarIsEmpty: Bool {
         return searchController.searchBar.text?.isEmpty ?? true
     }
 
+    // MARK: life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUIContent()
@@ -37,27 +37,26 @@ class SearchViewController: BasicViewController {
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
         
-        self.repositoryList = ReposytoryPresentation.defaults
-        displayList(repositoryList)
+        repositoryList = ReposytoryPresentation.defaults
+        render(repositoryList)
     }
     
     // MARK: update UI
     func updateList() {
-        let items = searchBarIsEmpty ? self.repositoryList : self.searchList
-        displayList(items)
+        let items = searchBarIsEmpty ? repositoryList : searchList
+        render(items)
     }
     
-    func displayList(_ items: [ReposytoryPresentation]) {
+    func render(_ items: [ReposytoryPresentation]) {
         contentStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
         items.forEach { (repository) in
             let repoView = RepositoryView()
-            repoView.setContent(repo: repository)
+            repoView.renderContetn(with: repository)
             repoView.delegate = self
             contentStackView.addArrangedSubview(repoView)
         }
-        self.view.layoutIfNeeded()
+        view.layoutIfNeeded()
     }
-    
 }
 
 // MARK: - extension: UISearchResultsUpdating
@@ -75,11 +74,11 @@ extension SearchViewController: UISearchResultsUpdating {
 // MARK: - extension: RepositoryViewDelegate
 extension SearchViewController: RepositoryViewDelegate {
     
-    func selectReposiory(with identifier: String, in view: RepositoryView) {
+    func didSelectRepositoryView(_ view: RepositoryView, with identifier: String) {
         guard let repo = repositoryList.first(where: {$0.identifier == identifier}) else { return }
         let detailVC = DetailRepositoryViewController()
         detailVC.hidesBottomBarWhenPushed = true
         detailVC.presentation = repo
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

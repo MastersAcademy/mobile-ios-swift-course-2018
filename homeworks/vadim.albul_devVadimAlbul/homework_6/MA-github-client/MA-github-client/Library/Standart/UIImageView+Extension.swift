@@ -11,14 +11,17 @@ import UIKit.UIImageView
 
 extension UIImageView {
     
-    func loadImage(by url: URL?, placeholder: UIImage?) -> URLSessionDataTask? {
-        self.image = placeholder
-        guard let url = url else { return  nil }
+    func loadImage(by url: URL?, with placeholder: UIImage?) -> URLSessionDataTask? {
+        image = placeholder
+        guard let url = url else { return nil }
         let task = URLSession.shared.dataTask(with: url) { (data, _, _) in
-            if let data = data, let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.image = image
-                }
+            guard let data = data,
+                let image = UIImage(data: data)
+                else {
+                    return
+            }
+            DispatchQueue.main.async {
+                self.image = image
             }
         }
         task.resume()

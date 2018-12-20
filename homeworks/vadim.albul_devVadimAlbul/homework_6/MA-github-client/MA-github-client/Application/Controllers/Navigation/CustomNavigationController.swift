@@ -47,7 +47,7 @@ class CustomNavigationController: UINavigationController {
 extension CustomNavigationController: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomAnimationController(presenting: operation == .push )
+        return FlipAnimationController(transitionType: (operation == .push) ? .presenting : .dismissing)
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {

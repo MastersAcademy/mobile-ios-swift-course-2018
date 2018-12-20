@@ -16,19 +16,18 @@ class DetailRepositoryViewController: BasicViewController {
     @IBOutlet weak var lblSubTitle: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
 
-    
     // MARK: life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-
     // MARK: update UI
     override func updateUIWithPresentation() {
-        guard let repo = presentation as? ReposytoryPresentation else { return }
-        lblTitle.text = repo.name
-        lblSubTitle.text = repo.subtitle
-        lblLanguage.text = repo.language
-        lblDescription.text = repo.description
+        (presentation as? ReposytoryPresentation).map { (repo) in
+            lblTitle.text = repo.name
+            lblSubTitle.text = repo.subtitle
+            lblLanguage.text = repo.language
+            lblDescription.text = repo.description
+        }
     }
 }

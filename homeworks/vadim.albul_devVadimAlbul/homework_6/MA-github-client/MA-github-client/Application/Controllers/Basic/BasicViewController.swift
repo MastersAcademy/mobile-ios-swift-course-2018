@@ -32,7 +32,7 @@ class BasicViewController: UIViewController {
     func setCustomBackButton() {
         self.navigationItem.hidesBackButton = true
         if let navigationController = navigationController, navigationController.viewControllers.count > 1 {
-            self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(actionBackButton))
+            navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back"), style: .plain, target: self, action: #selector(actionBackButton))
         }
     }
     
@@ -43,13 +43,16 @@ class BasicViewController: UIViewController {
     
     // MARK: target action
     @objc func actionBackButton() {
-        closeAlertVC {
+        presentAskCloseViewController { [weak self] in
+            guard let `self` = self else { return }
             self.navigationController?.popViewController(animated: true)
         }
     }
     
-    func closeAlertVC(_ completion: @escaping () -> Void) {
-        let alert = UIAlertController(title: "Are you sure you want to go back?", message: nil, preferredStyle: .alert)
+    func presentAskCloseViewController(_ completion: @escaping () -> Void) {
+        let alert = UIAlertController(title: "Are you sure you want to go back?",
+                                      message: nil,
+                                      preferredStyle: .alert)
         
         let yesAction = UIAlertAction(title: "Yes", style: .default) { (action) in
             completion()
@@ -58,6 +61,7 @@ class BasicViewController: UIViewController {
         
         let noAction = UIAlertAction(title: "No", style: .cancel, handler: nil)
         alert.addAction(noAction)
-        self.present(alert, animated: true, completion: nil)
+        
+        present(alert, animated: true, completion: nil)
     }
 }

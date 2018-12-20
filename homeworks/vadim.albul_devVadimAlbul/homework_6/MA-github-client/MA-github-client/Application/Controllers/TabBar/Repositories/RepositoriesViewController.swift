@@ -6,6 +6,16 @@ class RepositoriesViewController: BasicViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentStackView: UIStackView!
     
+    // MARK: property
+    private var repositories: RepositoriesPresentation? {
+        get {
+            return presentation as? RepositoriesPresentation
+        }
+        set {
+            presentation = newValue
+        }
+    }
+    
     // MARK: life-cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,28 +29,27 @@ class RepositoriesViewController: BasicViewController {
     
     // MARK: update UI
     override func updateUIWithPresentation() {
-        guard let repo = self.presentation as? RepositoriesPresentation else { return }
         contentStackView.arrangedSubviews.forEach { $0.removeFromSuperview() }
-
-        repo.items.forEach { (repository) in
-            let repoView = RepositoryView()
-            repoView.setContent(repo: repository)
-            repoView.delegate = self
-            contentStackView.addArrangedSubview(repoView)
+        repositories.map { (repo) in
+            repo.items.forEach { (repository) in
+                let repoView = RepositoryView()
+                repoView.renderContetn(with: repository)
+                repoView.delegate = self
+                contentStackView.addArrangedSubview(repoView)
+            }
         }
-        self.view.layoutIfNeeded()
+        view.layoutIfNeeded()
     }
 }
 
 // MARK: - extension: RepositoryViewDelegate
 extension RepositoriesViewController: RepositoryViewDelegate {
     
-    func selectReposiory(with identifier: String, in view: RepositoryView) {
-        guard let repositories = self.presentation as? RepositoriesPresentation else { return }
-        guard let repo = repositories.items.first(where: {$0.identifier == identifier}) else { return }
+    func didSelectRepositoryView(_ view: RepositoryView, with identifier: String) {
+        guard let repo = repositories?.items.first(where: {$0.identifier == identifier}) else { return }
         let detailVC = DetailRepositoryViewController()
         detailVC.hidesBottomBarWhenPushed = true
         detailVC.presentation = repo
-        self.navigationController?.pushViewController(detailVC, animated: true)
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }

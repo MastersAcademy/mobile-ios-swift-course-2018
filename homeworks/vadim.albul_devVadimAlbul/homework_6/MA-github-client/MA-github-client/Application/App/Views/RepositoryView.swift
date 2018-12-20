@@ -1,7 +1,7 @@
 import UIKit
 
 protocol RepositoryViewDelegate: AnyObject {
-    func selectReposiory(with identifier: String, in view: RepositoryView)
+    func didSelectRepositoryView(_ view: RepositoryView, with identifier: String)
 }
 
 class RepositoryView: ViewFromXib {
@@ -18,17 +18,17 @@ class RepositoryView: ViewFromXib {
 
     // MARK: IBAction
     @IBAction func touchContent(_ sender: UIControl) {
-        delegate?.selectReposiory(with: identifier, in: self)
+        delegate?.didSelectRepositoryView(self, with: identifier)
     }
 }
 
 extension RepositoryView {
     
-    func setContent(repo: ReposytoryPresentation) {
-        lblTitle.text = repo.name
-        lblSubtitle.text = repo.subtitle
-        lblDescription.text = repo.description
-        lblLanguege.text = repo.language
-        identifier = repo.identifier
+    func renderContetn(with model: ReposytoryPresentation) {
+        lblTitle.text = model.name
+        lblSubtitle.text = model.subtitle
+        lblDescription.text = model.description
+        lblLanguege.text = model.language
+        identifier = model.identifier
     }
 }

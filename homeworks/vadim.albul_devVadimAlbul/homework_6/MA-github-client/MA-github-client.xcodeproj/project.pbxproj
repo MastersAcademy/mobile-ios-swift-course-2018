@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14684BEF21C83820004FE389 /* FlipAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14684BEE21C83820004FE389 /* FlipAnimationController.swift */; };
 		149BC5DE21C63E7F00F1D832 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5DD21C63E7F00F1D832 /* Repository.swift */; };
 		149BC5E021C6499900F1D832 /* RepositoriesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5DF21C6499900F1D832 /* RepositoriesPresentation.swift */; };
 		149BC5E421C6553F00F1D832 /* DetailRepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5E221C6553F00F1D832 /* DetailRepositoryViewController.swift */; };
@@ -15,7 +16,6 @@
 		149BC5EB21C683F300F1D832 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EA21C683F300F1D832 /* ProfileViewController.swift */; };
 		149BC5ED21C6920000F1D832 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EC21C6920000F1D832 /* UserProfile.swift */; };
 		149BC5EF21C69B4F00F1D832 /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5EE21C69B4F00F1D832 /* UIImageView+Extension.swift */; };
-		149BC5F221C6A40C00F1D832 /* CustomAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5F121C6A40C00F1D832 /* CustomAnimationController.swift */; };
 		149BC5F521C6A48100F1D832 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149BC5F421C6A48100F1D832 /* CustomNavigationController.swift */; };
 		D74F9D7A21C3B37E00C5FA5A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D74F9D7821C3B37E00C5FA5A /* LoginViewController.swift */; };
 		D74F9D7B21C3B37E00C5FA5A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D74F9D7921C3B37E00C5FA5A /* LoginViewController.xib */; };
@@ -36,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14684BEE21C83820004FE389 /* FlipAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipAnimationController.swift; sourceTree = "<group>"; };
 		149BC5DD21C63E7F00F1D832 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		149BC5DF21C6499900F1D832 /* RepositoriesPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresentation.swift; sourceTree = "<group>"; };
 		149BC5E221C6553F00F1D832 /* DetailRepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepositoryViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +45,6 @@
 		149BC5EA21C683F300F1D832 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		149BC5EC21C6920000F1D832 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		149BC5EE21C69B4F00F1D832 /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
-		149BC5F121C6A40C00F1D832 /* CustomAnimationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAnimationController.swift; sourceTree = "<group>"; };
 		149BC5F421C6A48100F1D832 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
 		D74F9D7821C3B37E00C5FA5A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D74F9D7921C3B37E00C5FA5A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		149BC5F021C6A3C600F1D832 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
-				149BC5F121C6A40C00F1D832 /* CustomAnimationController.swift */,
+				14684BEE21C83820004FE389 /* FlipAnimationController.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -365,6 +365,7 @@
 				D74F9D8521C3B59100C5FA5A /* BasicViewController.swift in Sources */,
 				149BC5F521C6A48100F1D832 /* CustomNavigationController.swift in Sources */,
 				D74F9D9521C3D79300C5FA5A /* RepositoryView.swift in Sources */,
+				14684BEF21C83820004FE389 /* FlipAnimationController.swift in Sources */,
 				149BC5E021C6499900F1D832 /* RepositoriesPresentation.swift in Sources */,
 				149BC5DE21C63E7F00F1D832 /* Repository.swift in Sources */,
 				D77B548121C397D700CB3591 /* AppDelegate.swift in Sources */,
@@ -377,7 +378,6 @@
 				D74F9D9221C3D43A00C5FA5A /* RepositoriesViewController.swift in Sources */,
 				D74F9D9B21C3EECD00C5FA5A /* ViewFromXibProtocol.swift in Sources */,
 				D74F9D8A21C3B81600C5FA5A /* LoginPresentation.swift in Sources */,
-				149BC5F221C6A40C00F1D832 /* CustomAnimationController.swift in Sources */,
 				149BC5EF21C69B4F00F1D832 /* UIImageView+Extension.swift in Sources */,
 				D74F9D9C21C3EECD00C5FA5A /* ViewFromXib.swift in Sources */,
 				D74F9D9E21C3EF3800C5FA5A /* NSObject+Extension.swift in Sources */,

@@ -20,6 +20,14 @@ class ProfileViewController: BasicViewController {
     
     // MARK: property
     private var requestTask: URLSessionDataTask?
+    private var profilePresentation: UserProfile? {
+        set {
+            presentation = newValue
+        }
+        get {
+            return presentation as? UserProfile
+        }
+    }
     
     // MARK: life-cycle
     override func viewDidLoad() {
@@ -35,26 +43,25 @@ class ProfileViewController: BasicViewController {
     
     // MARK: update UI
     override func updateUIWithPresentation() {
-        guard let profile = presentation as? UserProfile else { return }
-        lblNickname.text = profile.nickname
-        tfName.text = profile.name
-        lblEmail.text = profile.email
-        tvBio.text = profile.bio
-        tfCountry.text = profile.country
-        if let url = profile.avatarURL {
-            requestTask = imgView.loadImage(by: url, placeholder: #imageLiteral(resourceName: "default-img"))
+        profilePresentation.map { (profile) in
+            lblNickname.text = profile.nickname
+            tfName.text = profile.name
+            lblEmail.text = profile.email
+            tvBio.text = profile.bio
+            tfCountry.text = profile.country
+            if let url = profile.avatarURL {
+                requestTask = imgView.loadImage(by: url, with: #imageLiteral(resourceName: "default-img"))
+            }
         }
     }
 
     // MARK: target action
     @IBAction func changedName(_ sender: UITextField) {
-        guard let profile = presentation as? UserProfile else { return }
-        profile.name = sender.text ?? ""
+        profilePresentation?.name = sender.text ?? ""
     }
     
     @IBAction func changedCountry(_ sender: UITextField) {
-        guard let profile = presentation as? UserProfile else { return }
-        profile.country = sender.text
+        profilePresentation?.country = sender.text
     }
 }
 
@@ -62,9 +69,8 @@ class ProfileViewController: BasicViewController {
 extension ProfileViewController: UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
-        guard let profile = presentation as? UserProfile else { return }
         if textView == tvBio {
-            profile.bio = textView.text
+            profilePresentation?.bio = textView.text
         }
     }
 }

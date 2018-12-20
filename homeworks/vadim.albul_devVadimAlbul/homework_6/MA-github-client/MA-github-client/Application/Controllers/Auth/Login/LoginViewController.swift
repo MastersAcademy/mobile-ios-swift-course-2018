@@ -19,10 +19,11 @@ class LoginViewController: BasicViewController {
         tfPassword.text = loginPresentation.password
     }
     
+    // MARK: IBAction
     @IBAction func touchSingIn(_ sender: UIButton) {
-        let storyboard = UIStoryboard(name: "TabBar", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "TabBar", bundle: .main)
         if let tabBarVC = storyboard.instantiateInitialViewController() {
-            self.present(tabBarVC, animated: true, completion: nil)
+            present(tabBarVC, animated: true, completion: nil)
         }
     }
 }
