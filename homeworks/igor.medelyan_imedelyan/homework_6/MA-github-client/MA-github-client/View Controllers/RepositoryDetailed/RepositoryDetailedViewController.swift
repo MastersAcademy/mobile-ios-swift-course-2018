@@ -17,7 +17,7 @@ class RepositoryDetailedViewController: UIViewController {
     @IBOutlet private weak var languageLabel: UILabel!
     
     // MARK: - Variables
-    var repository: Repository!
+    var repository: Repository?
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -27,22 +27,22 @@ class RepositoryDetailedViewController: UIViewController {
     
     func setupViews() {
         let nameFont = UIFont.defaultFont(for: .title1)
-        let name = NSAttributedString(string: repository.name,
+        let name = NSAttributedString(string: repository?.name ?? "",
                                       attributes: [.font: nameFont, .foregroundColor: UIColor.blue])
         nameLabel.attributedText = name
         
         let subtitleFont = UIFont.defaultFont(for: .subheadline)
-        let subtitle = NSAttributedString(string: repository.subtitle,
+        let subtitle = NSAttributedString(string: repository?.subtitle ?? "",
                                           attributes: [.font: subtitleFont, .foregroundColor: UIColor.gray])
         subtitileLabel.attributedText = subtitle
         
         let descriptionFont = UIFont.defaultFont(for: .body)
-        let description = NSAttributedString(string: repository.description,
+        let description = NSAttributedString(string: repository?.description ?? "",
                                              attributes: [.font: descriptionFont, .foregroundColor: UIColor.gray])
         descriptionLabel.attributedText = description
         
         let languageFont = UIFont.defaultFont(for: .body)
-        let language = NSAttributedString(string: repository.language,
+        let language = NSAttributedString(string: repository?.language ?? "",
                                           attributes: [.font: languageFont, .foregroundColor: UIColor.gray])
         languageLabel.attributedText = language
     }

@@ -11,9 +11,9 @@ import UIKit
 class RepositoriesTableViewController: UITableViewController {
 
     // MARK: - Variables
-    let repositories: [Repository] = [Repository.createMockObject(),
-                                      Repository.createMockObject(),
-                                      Repository.createMockObject()]
+    let repositories: [Repository] = [Repository.makeMock(),
+                                      Repository.makeMock(),
+                                      Repository.makeMock()]
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -24,8 +24,9 @@ class RepositoriesTableViewController: UITableViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let selectedRow = tableView.indexPathForSelectedRow?.row else { return }
-        let detailVC = segue.destination as! RepositoryDetailedViewController
-        detailVC.repository = repositories[selectedRow]
+        (segue.destination as? RepositoryDetailedViewController).map {
+            $0.repository = repositories[selectedRow]
+        }
     }
 
     // MARK: - Table view data source

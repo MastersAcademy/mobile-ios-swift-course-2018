@@ -16,7 +16,7 @@ struct Repository {
 }
     
 extension Repository {
-    static func createMockObject() -> Repository {        
+    static func makeMock() -> Repository {        
         return Repository(name: "Project",
                           subtitle: "Fork from another Project",
                           description: "Some usefull framework for some usefull Project from some usefull scope",

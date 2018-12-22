@@ -11,7 +11,7 @@ import UIKit
 class RepositoryTableViewCell: UITableViewCell {
     
     private lazy var repositoryView: RepositoryInfoView = {
-        return RepositoryInfoView.create()
+        return RepositoryInfoView.make()
     }()
     
     static var nib:UINib {

@@ -57,7 +57,7 @@ extension SearchViewController: UITableViewDelegate {
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.count >= 2 {
-            repositories = [Repository.createMockObject(), Repository.createMockObject()]
+            repositories = [Repository.makeMock(), Repository.makeMock()]
         } else {
             repositories = []
         }

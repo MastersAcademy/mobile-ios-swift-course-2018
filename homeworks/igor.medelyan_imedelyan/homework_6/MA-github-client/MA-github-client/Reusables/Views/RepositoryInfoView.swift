@@ -15,7 +15,7 @@ class RepositoryInfoView: UIView {
     @IBOutlet private weak var descriptionLabel: UILabel!
     @IBOutlet private weak var languageLabel: UILabel!
     
-    class func create() -> RepositoryInfoView {
+    class func make() -> RepositoryInfoView {
         let nib = UINib(nibName: "RepositoryInfoView", bundle: nil)
         return nib.instantiate(withOwner: nil, options: nil).first as! RepositoryInfoView
     }
