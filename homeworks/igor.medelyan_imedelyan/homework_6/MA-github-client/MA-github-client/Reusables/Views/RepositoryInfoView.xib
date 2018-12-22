@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RepositoryInfoView" customModule="MA_github_client" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLj-Eo-2bv">
+                    <rect key="frame" x="20" y="20" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMB-n7-uFI">
+                    <rect key="frame" x="20" y="61" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ybh-BO-Ms3">
+                    <rect key="frame" x="20" y="102" width="335" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vC1-xh-2tU">
+                    <rect key="frame" x="20" y="142.5" width="335" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vC1-xh-2tU" secondAttribute="bottom" constant="20" id="0JA-xR-w4Z"/>
+                <constraint firstItem="mMB-n7-uFI" firstAttribute="top" secondItem="LLj-Eo-2bv" secondAttribute="bottom" constant="20" id="2UK-9c-YoU"/>
+                <constraint firstItem="LLj-Eo-2bv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="3Ul-tg-ESx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Ybh-BO-Ms3" secondAttribute="trailing" constant="20" id="4vo-7V-mPI"/>
+                <constraint firstItem="vC1-xh-2tU" firstAttribute="top" secondItem="Ybh-BO-Ms3" secondAttribute="bottom" constant="20" id="81W-BH-RP5"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mMB-n7-uFI" secondAttribute="trailing" constant="20" id="CH6-qo-Lzs"/>
+                <constraint firstItem="Ybh-BO-Ms3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="MvM-BY-fmJ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="LLj-Eo-2bv" secondAttribute="trailing" constant="20" id="e65-ZC-zTK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vC1-xh-2tU" secondAttribute="trailing" constant="20" id="fTa-0F-ZCN"/>
+                <constraint firstItem="mMB-n7-uFI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="fZe-60-0cE"/>
+                <constraint firstItem="LLj-Eo-2bv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="20" id="pZt-Jc-L6m"/>
+                <constraint firstItem="Ybh-BO-Ms3" firstAttribute="top" secondItem="mMB-n7-uFI" secondAttribute="bottom" constant="20" id="u4e-Q4-QB8"/>
+                <constraint firstItem="vC1-xh-2tU" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="xWn-9j-eQP"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="Ybh-BO-Ms3" id="NI4-hU-hTc"/>
+                <outlet property="languageLabel" destination="vC1-xh-2tU" id="Bn2-rM-0bj"/>
+                <outlet property="nameLabel" destination="LLj-Eo-2bv" id="f5v-H7-OLg"/>
+                <outlet property="subtitileLabel" destination="mMB-n7-uFI" id="9Tk-Cc-ApA"/>
+            </connections>
+        </view>
+    </objects>
+</document>
