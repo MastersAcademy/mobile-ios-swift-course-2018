@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  MA-github-client
 //
 //  Created by Dan on 12/16/18.
@@ -9,33 +9,27 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    let user = LoginData.lock()
+    let user = LoginPresentation.makeMock()
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBAction func signInButton(_ sender: Any) {
         if loginTextField.text == user.email && passwordTextField.text == user.password{
-            self.performSegue(withIdentifier: "tabBar" , sender: self)
-            
+            performSegue(withIdentifier: Segues.Identifier.tabBar , sender: self)
         } else {
-            alert()
+            presentAuthorizationErrorAlert()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
-    func alert(){
+    
+    func presentAuthorizationErrorAlert(){
         let alert = UIAlertController(title: "Error", message: "Invalid password",
-                                      preferredStyle: UIAlertController.Style.alert)
-        // add an action (button)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        // show the alert
-        self.present(alert, animated: true, completion: nil)
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }
-
-
-

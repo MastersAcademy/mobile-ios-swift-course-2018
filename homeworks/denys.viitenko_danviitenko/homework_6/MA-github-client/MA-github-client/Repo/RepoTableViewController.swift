@@ -9,34 +9,35 @@
 import UIKit
 
 class RepoTableViewController: UITableViewController {
-    var repositories = [Repo]()
+    var presentationItems = [RepoPresentation]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addRepo()
-        let nib = UINib.init(nibName: "RepoTableViewCell", bundle: nil)
-        tableView.register(nib, forCellReuseIdentifier: "RepoTableViewCell")
+        let nib = UINib.init(nibName: NibName.RepoTableViewCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: NibName.RepoTableViewCell)
         tableView.tableFooterView = UIView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
-        
+        tabBarController?.tabBar.isHidden = false
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return presentationItems.count
     }
+    
     func addRepo(){
-        let repo1 = Repo(title: "Disk", subtitle:"Forked from saoudrizwan/Disk", description:"Delightful framework for iOS to easily persist structs, images, and data", language: "Swift")
-        let repo2 = Repo(title: "RxSwift", subtitle:"Forked from ReactiveX/RxSwift", description:"Reactive Programming in Swift", language: "Swift")
-        let repo3 = Repo(title: "ios-mvp-clean-architecture", subtitle:"Forked from FortechRomania/ios-mvp-clean-architecture", description:"Demo iOS application built to highlight MVP (Model View Presenter) and Clean Architecture concepts", language: "Swift")
+        let diskRepoPresentation = RepoPresentation(title: "Disk", subtitle:"Forked from saoudrizwan/Disk", description:"Delightful framework for iOS to easily persist structs, images, and data", language: "Swift")
+        let rxSwiftRepoPresentation = RepoPresentation(title: "RxSwift", subtitle:"Forked from ReactiveX/RxSwift", description:"Reactive Programming in Swift", language: "Swift")
+        let mvpRepoPresentation = RepoPresentation(title: "ios-mvp-clean-architecture", subtitle:"Forked from FortechRomania/ios-mvp-clean-architecture", description:"Demo iOS application built to highlight MVP (Model View Presenter) and Clean Architecture concepts", language: "Swift")
         
-        repositories += [repo1,repo2,repo3]
+        presentationItems += [diskRepoPresentation,rxSwiftRepoPresentation,mvpRepoPresentation]
     }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
-        let hedline = repositories[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: NibName.RepoTableViewCell, for: indexPath) as! RepoTableViewCell
+        let hedline = presentationItems[indexPath.row]
         cell.titleLabel.text = hedline.title
         cell.subtitleLabel.text = hedline.subtitle
         cell.descriptionLabel.text = hedline.description
@@ -50,15 +51,13 @@ class RepoTableViewController: UITableViewController {
     }
   
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowDetail", sender: nil)
+        performSegue(withIdentifier: Segues.Identifier.showDetails, sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowDetail"{
-            if let indexPath = tableView.indexPathForSelectedRow{
-            let detailVC = segue.destination as! DetailRepoViewController
-                detailVC.repo = [self.repositories[indexPath.row]]
-            }
+        if segue.identifier == Segues.Identifier.showDetails, let indexPath = tableView.indexPathForSelectedRow, let detailViewController = segue.destination as? DetailRepoViewController, presentationItems.indices.contains(indexPath.row){
+            detailViewController.repo = presentationItems[indexPath.row]
+            
         }
     }
 }

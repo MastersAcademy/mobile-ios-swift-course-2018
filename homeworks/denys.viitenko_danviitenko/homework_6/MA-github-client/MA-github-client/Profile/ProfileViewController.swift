@@ -9,15 +9,15 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    var profile = ProfileData(imageView: nil, nickLabel: "DanViitenko", nameLabel: "Denys", surnameLabel: "Viitenko", mailLabel: "new@gmail.com", countryLabel: "Ukraine")
+    var profile = ProfilePresentation.makeMock()
     @IBOutlet weak var imageView: UIImageView!
     
     @IBOutlet weak var nickLabel: UILabel!
-    @IBOutlet weak var nameTextF: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var surnameLabel: UILabel!
-    @IBOutlet weak var mailTextF: UITextField!
+    @IBOutlet weak var mailTextField: UITextField!
     
-    @IBOutlet weak var countryTextF: UITextField!
+    @IBOutlet weak var countryTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,15 @@ class ProfileViewController: UIViewController {
         
     }
     func setProfile(){
-        if profile.imageView != nil {
-            imageView.image = UIImage(named: profile.imageView!)
-            
-        }else{
-            imageView.image = UIImage(named: "githubImage")
+        let imageName = profile.imageName ?? "githubImage"
+        UIImage(named: imageName).map {
+            imageView.image = $0
         }
-        nickLabel.text = profile.nickLabel
-        nameTextF.text = profile.nameLabel
-        surnameLabel.text = profile.surnameLabel
-        mailTextF.text = profile.mailLabel
-        countryTextF.text = profile.countryLabel
+        nickLabel.text = profile.nick
+        nameTextField.text = profile.name
+        surnameLabel.text = profile.surname
+        mailTextField.text = profile.mail
+        countryTextField.text = profile.country
     }
     
 }

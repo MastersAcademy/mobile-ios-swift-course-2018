@@ -13,8 +13,8 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github" translatesAutoresizingMaskIntoConstraints="NO" id="LCp-I5-PL5">
@@ -91,7 +91,7 @@
             <objects>
                 <viewController id="Uti-lO-NNJ" customClass="SearchViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XtS-hb-Hs7">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="63x-Uz-sli">
@@ -122,7 +122,7 @@
                     <navigationItem key="navigationItem" id="NZ6-g0-d1N"/>
                     <connections>
                         <outlet property="searchBar" destination="63x-Uz-sli" id="v68-SX-VdX"/>
-                        <outlet property="tblView" destination="BdS-vo-EDY" id="cIz-Fq-4Fb"/>
+                        <outlet property="tableView" destination="BdS-vo-EDY" id="cIz-Fq-4Fb"/>
                         <segue destination="7c5-bR-PdE" kind="show" identifier="ShowRepoSearch" id="Kfg-Q0-WoU"/>
                     </connections>
                 </viewController>
@@ -135,7 +135,7 @@
             <objects>
                 <viewController id="u0b-bP-BVf" customClass="ProfileViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HhP-9L-Li1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hG4-pi-cEf">
@@ -200,10 +200,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="0BI-xh-kJv"/>
                     <connections>
-                        <outlet property="countryTextF" destination="SfV-0J-4fq" id="DxJ-Y9-a2y"/>
+                        <outlet property="countryTextField" destination="SfV-0J-4fq" id="DxJ-Y9-a2y"/>
                         <outlet property="imageView" destination="hG4-pi-cEf" id="ZCZ-9j-kJA"/>
-                        <outlet property="mailTextF" destination="bgM-3K-SIN" id="esS-ZB-VDN"/>
-                        <outlet property="nameTextF" destination="AYZ-7n-Ykm" id="0wL-Jg-Mqo"/>
+                        <outlet property="mailTextField" destination="bgM-3K-SIN" id="esS-ZB-VDN"/>
+                        <outlet property="nameTextField" destination="AYZ-7n-Ykm" id="0wL-Jg-Mqo"/>
                         <outlet property="nickLabel" destination="c8q-Rb-I2J" id="Tnm-Gl-fvS"/>
                         <outlet property="surnameLabel" destination="RU3-jS-b67" id="rQt-Bi-7dn"/>
                     </connections>
@@ -239,7 +239,7 @@
                     <tabBarItem key="tabBarItem" title="Search" id="UCv-uE-asH"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="svx-9f-7bi">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
@@ -259,7 +259,7 @@
                     <tabBarItem key="tabBarItem" title="Profile" id="qil-5u-UkI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y7o-bR-0uv">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
@@ -279,7 +279,7 @@
                     <tabBarItem key="tabBarItem" title="Repositories" id="eAf-uD-59f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IKW-QC-Idu">
-                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="600" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                     </navigationBar>
@@ -297,7 +297,7 @@
             <objects>
                 <tableViewController id="usW-Dv-HTV" customClass="RepoTableViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="eYr-2K-kPV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -329,7 +329,7 @@
             <objects>
                 <viewController id="Rn4-9V-PU4" customClass="DetailRepoViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fU3-bj-MXH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rok-e7-BYi">
@@ -391,7 +391,7 @@
             <objects>
                 <viewController id="7c5-bR-PdE" customClass="DetailSearchViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EMg-Jo-GDp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u56-Dc-Yfk">

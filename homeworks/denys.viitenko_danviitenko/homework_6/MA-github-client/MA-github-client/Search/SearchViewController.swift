@@ -9,37 +9,37 @@
 import UIKit
 
 class SearchViewController: UIViewController, UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
-    var repositories = [Repo]()
+    var presentationItems = [RepoPresentation]()
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tblView: UITableView!
+    @IBOutlet weak var tableView: UITableView!
     
-    var dataFiltered: [Repo]!
+    var dataFiltered = [RepoPresentation]()
     override func viewDidLoad() {
         super.viewDidLoad()
         addRepo()
-        let nib = UINib.init(nibName: "RepoTableViewCell", bundle: nil)
-        tblView.register(nib, forCellReuseIdentifier: "RepoTableViewCell")
+        let nib = UINib(nibName: NibName.RepoTableViewCell, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: NibName.RepoTableViewCell)
         searchBar.delegate = self
-        dataFiltered = repositories
-        tblView.tableFooterView = UIView()
+        dataFiltered = presentationItems
+        tableView.tableFooterView = UIView()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.tabBarController?.tabBar.isHidden = false
+        tabBarController?.tabBar.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataFiltered.count
     }
     func addRepo(){
-        let repo1 = Repo(title: "Disk", subtitle:"Forked from saoudrizwan/Disk", description:"Delightful framework for iOS to easily persist structs, images, and data", language: "Swift")
-        let repo2 = Repo(title: "RxSwift", subtitle:"Forked from ReactiveX/RxSwift", description:"Reactive Programming in Swift", language: "Swift")
-        let repo3 = Repo(title: "ios-mvp-clean-architecture", subtitle:"Forked from FortechRomania/ios-mvp-clean-architecture", description:"Demo iOS application built to highlight MVP (Model View Presenter) and Clean Architecture concepts", language: "Swift")
+        let diskRepoPresentation = RepoPresentation(title: "Disk", subtitle:"Forked from saoudrizwan/Disk", description:"Delightful framework for iOS to easily persist structs, images, and data", language: "Swift")
+        let rxSwiftRepoPresentation = RepoPresentation(title: "RxSwift", subtitle:"Forked from ReactiveX/RxSwift", description:"Reactive Programming in Swift", language: "Swift")
+        let mvpRepoPresentation = RepoPresentation(title: "ios-mvp-clean-architecture", subtitle:"Forked from FortechRomania/ios-mvp-clean-architecture", description:"Demo iOS application built to highlight MVP (Model View Presenter) and Clean Architecture concepts", language: "Swift")
         
-        repositories += [repo1,repo2,repo3]
+        presentationItems += [diskRepoPresentation,rxSwiftRepoPresentation,mvpRepoPresentation]
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RepoTableViewCell", for: indexPath) as! RepoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: NibName.RepoTableViewCell, for: indexPath) as! RepoTableViewCell
         let hedline = dataFiltered[indexPath.row]
         cell.titleLabel.text = hedline.title
         cell.subtitleLabel.text = hedline.subtitle
@@ -53,23 +53,20 @@ class SearchViewController: UIViewController, UITableViewDelegate,UITableViewDat
         return 135
     }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        dataFiltered = searchText.isEmpty ? repositories : repositories.filter({(dataString: Repo) -> Bool in
+        dataFiltered = searchText.isEmpty ? presentationItems : presentationItems.filter({(dataString: RepoPresentation) -> Bool in
             dataString.title.range(of: searchText, options: .caseInsensitive) != nil
         } )
-        tblView.reloadData()
+        tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "ShowRepoSearch", sender: nil)
+        performSegue(withIdentifier: Segues.Identifier.showRepoSearch, sender: nil)
         
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ShowRepoSearch"{
-            if let indexPath = tblView.indexPathForSelectedRow{
-                let detailVC = segue.destination as! DetailSearchViewController
-                detailVC.repo = [self.repositories[indexPath.row]]
+        if segue.identifier == Segues.Identifier.showRepoSearch, let indexPath = tableView.indexPathForSelectedRow, let detailViewController = segue.destination as? DetailSearchViewController, presentationItems.indices.contains(indexPath.row){
+            detailViewController.repo = presentationItems[indexPath.row]
             }
         }
-    }
 }

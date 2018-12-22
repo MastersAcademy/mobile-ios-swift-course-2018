@@ -1,5 +1,5 @@
 //
-//  LoginData.swift
+//  LoginPresentation.swift
 //  MA-github-client
 //
 //  Created by Dan on 12/18/18.
@@ -8,16 +8,15 @@
 
 import Foundation
 
-struct LoginData  {
+struct LoginPresentation  {
     var email: String
     var password: String
 }
 
-extension LoginData{
-    static func lock() -> LoginData {
+extension LoginPresentation{
+    static func makeMock() -> LoginPresentation {
         let email = "admin"
         let password = "admin"
-        return LoginData(email: email, password: password)
+        return LoginPresentation(email: email, password: password)
     }
-    
 }

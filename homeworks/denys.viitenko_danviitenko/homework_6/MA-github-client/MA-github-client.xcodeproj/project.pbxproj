@@ -7,16 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		371964B721CEF01D00FE9DAC /* Segues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371964B621CEF01D00FE9DAC /* Segues.swift */; };
 		37674B6421C781DD00307EB4 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B6221C781DD00307EB4 /* RepoTableViewCell.swift */; };
 		37674B6721C78AC400307EB4 /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B6621C78AC400307EB4 /* RepoTableViewController.swift */; };
 		37674B6D21C7C14E00307EB4 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37674B6C21C7C14E00307EB4 /* RepoTableViewCell.xib */; };
 		37674B6F21C7D92700307EB4 /* DetailRepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B6E21C7D92700307EB4 /* DetailRepoViewController.swift */; };
-		37674B7121C7FBB700307EB4 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7021C7FBB700307EB4 /* Repo.swift */; };
+		37674B7121C7FBB700307EB4 /* RepoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7021C7FBB700307EB4 /* RepoPresentation.swift */; };
 		37674B7321C80CC700307EB4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7221C80CC700307EB4 /* SearchViewController.swift */; };
 		37674B7521C833F600307EB4 /* DetailSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7421C833F600307EB4 /* DetailSearchViewController.swift */; };
 		37674B7721C83EDA00307EB4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7621C83EDA00307EB4 /* ProfileViewController.swift */; };
-		37674B7921C843A400307EB4 /* ProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7821C843A400307EB4 /* ProfileData.swift */; };
-		37674B7B21C85BC200307EB4 /* LoginData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7A21C85BC200307EB4 /* LoginData.swift */; };
+		37674B7921C843A400307EB4 /* ProfilePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7821C843A400307EB4 /* ProfilePresentation.swift */; };
+		37674B7B21C85BC200307EB4 /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37674B7A21C85BC200307EB4 /* LoginPresentation.swift */; };
 		37F2457921C6D7C3004051BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2457821C6D7C3004051BB /* AppDelegate.swift */; };
 		37F2457B21C6D7C3004051BB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37F2457A21C6D7C3004051BB /* LoginViewController.swift */; };
 		37F2457E21C6D7C3004051BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37F2457C21C6D7C3004051BB /* Main.storyboard */; };
@@ -25,16 +26,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		371964B621CEF01D00FE9DAC /* Segues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Segues.swift; sourceTree = "<group>"; };
 		37674B6221C781DD00307EB4 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		37674B6621C78AC400307EB4 /* RepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
 		37674B6C21C7C14E00307EB4 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		37674B6E21C7D92700307EB4 /* DetailRepoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRepoViewController.swift; sourceTree = "<group>"; };
-		37674B7021C7FBB700307EB4 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		37674B7021C7FBB700307EB4 /* RepoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresentation.swift; sourceTree = "<group>"; };
 		37674B7221C80CC700307EB4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		37674B7421C833F600307EB4 /* DetailSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchViewController.swift; sourceTree = "<group>"; };
 		37674B7621C83EDA00307EB4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		37674B7821C843A400307EB4 /* ProfileData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileData.swift; sourceTree = "<group>"; };
-		37674B7A21C85BC200307EB4 /* LoginData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginData.swift; sourceTree = "<group>"; };
+		37674B7821C843A400307EB4 /* ProfilePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresentation.swift; sourceTree = "<group>"; };
+		37674B7A21C85BC200307EB4 /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
 		37F2457521C6D7C3004051BB /* MA-github-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MA-github-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F2457821C6D7C3004051BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		37F2457A21C6D7C3004051BB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -60,7 +62,7 @@
 			children = (
 				37674B6221C781DD00307EB4 /* RepoTableViewCell.swift */,
 				37674B6621C78AC400307EB4 /* RepoTableViewController.swift */,
-				37674B7021C7FBB700307EB4 /* Repo.swift */,
+				37674B7021C7FBB700307EB4 /* RepoPresentation.swift */,
 				37674B6E21C7D92700307EB4 /* DetailRepoViewController.swift */,
 				37674B6C21C7C14E00307EB4 /* RepoTableViewCell.xib */,
 			);
@@ -71,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				37674B7621C83EDA00307EB4 /* ProfileViewController.swift */,
-				37674B7821C843A400307EB4 /* ProfileData.swift */,
+				37674B7821C843A400307EB4 /* ProfilePresentation.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -89,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				37F2457A21C6D7C3004051BB /* LoginViewController.swift */,
-				37674B7A21C85BC200307EB4 /* LoginData.swift */,
+				37674B7A21C85BC200307EB4 /* LoginPresentation.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -116,6 +118,7 @@
 				37F2457821C6D7C3004051BB /* AppDelegate.swift */,
 				37674B7F21C86E8B00307EB4 /* Login */,
 				37F2457C21C6D7C3004051BB /* Main.storyboard */,
+				371964B621CEF01D00FE9DAC /* Segues.swift */,
 				37674B7C21C86E0C00307EB4 /* Repo */,
 				37674B7E21C86E7000307EB4 /* Search */,
 				37674B7D21C86E5600307EB4 /* Profile */,
@@ -200,11 +203,12 @@
 			files = (
 				37674B6F21C7D92700307EB4 /* DetailRepoViewController.swift in Sources */,
 				37674B7321C80CC700307EB4 /* SearchViewController.swift in Sources */,
-				37674B7B21C85BC200307EB4 /* LoginData.swift in Sources */,
+				37674B7B21C85BC200307EB4 /* LoginPresentation.swift in Sources */,
 				37F2457B21C6D7C3004051BB /* LoginViewController.swift in Sources */,
-				37674B7921C843A400307EB4 /* ProfileData.swift in Sources */,
+				37674B7921C843A400307EB4 /* ProfilePresentation.swift in Sources */,
 				37674B6721C78AC400307EB4 /* RepoTableViewController.swift in Sources */,
-				37674B7121C7FBB700307EB4 /* Repo.swift in Sources */,
+				37674B7121C7FBB700307EB4 /* RepoPresentation.swift in Sources */,
+				371964B721CEF01D00FE9DAC /* Segues.swift in Sources */,
 				37F2457921C6D7C3004051BB /* AppDelegate.swift in Sources */,
 				37674B7721C83EDA00307EB4 /* ProfileViewController.swift in Sources */,
 				37674B7521C833F600307EB4 /* DetailSearchViewController.swift in Sources */,

@@ -14,17 +14,17 @@ class DetailSearchViewController: UIViewController {
     @IBOutlet weak var subtitleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var languageLabel: UILabel!
-    var repo = [Repo]()
+    var repo: RepoPresentation?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = true
+        tabBarController?.tabBar.isHidden = true
         setLabels()
         
     }
     func setLabels(){
-        titleLabel.text = repo[0].title
-        subtitleLabel.text = repo[0].subtitle
-        descriptionLabel.text = repo[0].description
-        languageLabel.text = repo[0].language
+        titleLabel.text = repo?.title
+        subtitleLabel.text = repo?.subtitle
+        descriptionLabel.text = repo?.description
+        languageLabel.text = repo?.language
     }
 }

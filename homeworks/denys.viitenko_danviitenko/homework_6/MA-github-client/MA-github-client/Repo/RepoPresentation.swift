@@ -1,5 +1,5 @@
 //
-//  Repo.swift
+//  RepoPresentation.swift
 //  MA-github-client
 //
 //  Created by Dan on 12/17/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repo {
+struct RepoPresentation {
     let title: String
     let subtitle: String
     let description: String

@@ -7,6 +7,11 @@
 //
 
 import UIKit
+
+enum NibName{
+    static let RepoTableViewCell = "RepoTableViewCell"
+}
+
 @IBDesignable
 class RepoTableViewCell: UITableViewCell {
     
