@@ -10,28 +10,30 @@ import UIKit
 
 class LogLifeViewController: UIViewController {
     
+    let name = String(describing: LogLifeViewController.self)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("🍾" + description + "viewDidLoad")
+        print("🍾 " + name + " viewDidLoad")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        print("🥃" + description + "viewWillAppear")
+        print("🥃 " + name + " viewWillAppear")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        print("🍺" + description + "viewDidAppear")
+        print("🍺 " + name + " viewDidAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        print("🥃" + description + "viewWillDisappear")
+        print("🥃 " + name + " viewWillDisappear")
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
-        print("🍽" + description + "viewDidDisappear")
+        print("🍽 " + description + " viewDidDisappear")
     }
 }
