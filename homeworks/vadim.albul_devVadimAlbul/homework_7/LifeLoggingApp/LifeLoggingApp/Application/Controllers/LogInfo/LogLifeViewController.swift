@@ -9,6 +9,21 @@
 import UIKit
 
 class LogLifeViewController: UIViewController {
+  
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("\(self.theClassName): \(#function)")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("\(self.theClassName): \(#function)")
+    }
+
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("\(self.theClassName): \(#function)")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
