@@ -12,6 +12,7 @@
 		CD2C361321EDF25700EEB168 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2C361121EDF25700EEB168 /* Main.storyboard */; };
 		CD2C361521EDF25800EEB168 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD2C361421EDF25800EEB168 /* Assets.xcassets */; };
 		CD2C361821EDF25800EEB168 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2C361621EDF25800EEB168 /* LaunchScreen.storyboard */; };
+		CD2C362021EDF31100EEB168 /* LogLifeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2C361F21EDF31100EEB168 /* LogLifeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		CD2C361421EDF25800EEB168 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD2C361721EDF25800EEB168 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD2C361921EDF25800EEB168 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD2C361F21EDF31100EEB168 /* LogLifeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLifeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				CD2C360D21EDF25700EEB168 /* AppDelegate.swift */,
 				CD2C360F21EDF25700EEB168 /* ViewController.swift */,
+				CD2C361F21EDF31100EEB168 /* LogLifeViewController.swift */,
 				CD2C361121EDF25700EEB168 /* Main.storyboard */,
 				CD2C361421EDF25800EEB168 /* Assets.xcassets */,
 				CD2C361621EDF25800EEB168 /* LaunchScreen.storyboard */,
@@ -137,6 +140,7 @@
 			files = (
 				CD2C361021EDF25700EEB168 /* ViewController.swift in Sources */,
 				CD2C360E21EDF25700EEB168 /* AppDelegate.swift in Sources */,
+				CD2C362021EDF31100EEB168 /* LogLifeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

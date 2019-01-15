@@ -9,22 +9,42 @@
 import UIKit
 
 class LogLifeViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    override func loadView() {
+        super.loadView()
+        greeting(name: "loadView")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        greeting(name: "viewDidLoad")
     }
-    */
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        greeting(name: "viewWillAppear")
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        greeting(name: "viewWillLayoutSubviews")
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        greeting(name: "viewDidLayoutSubviews")
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidLoad()
+        greeting(name: "viewDidAppear")
+    }
+    
+    func greeting(name: String) {
+        var className: String
+        {
+            return String(describing: LogLifeViewController.self)
+        }
+        print("👋 Class: \(className) - Method: \(name)")
+    }
 }
