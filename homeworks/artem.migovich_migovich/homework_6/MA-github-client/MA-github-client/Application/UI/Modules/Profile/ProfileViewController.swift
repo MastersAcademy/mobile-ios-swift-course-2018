@@ -10,21 +10,32 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var nicknameLabel: UILabel!
+    @IBOutlet weak var bioLabel: UILabel!
+    @IBOutlet weak var companyLabel: UILabel!
+    @IBOutlet weak var countryLabel: UILabel!
+    @IBOutlet weak var emailLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
+    
+    var profile = ProfilePresentation.makeMock()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.title = "Profile"
+        updateProfile()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateProfile() {
+        profileImageView.image = UIImage(named: profile.imageName)
+        nameLabel.attributedText = profile.name
+        nicknameLabel.attributedText = profile.nickname
+        bioLabel.text = profile.bio
+        companyLabel.text = profile.company
+        countryLabel.text = profile.country
+        emailLabel.attributedText = profile.email
+        websiteLabel.attributedText = profile.website
     }
-    */
-
 }
+ 
