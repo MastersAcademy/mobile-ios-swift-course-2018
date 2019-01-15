@@ -11,7 +11,22 @@ import UIKit
 class LogLifeViewController: UIViewController {
     
     let name = String(describing: LogLifeViewController.self)
-        
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("🍼 " + name + " init nibName")
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        print("🥛 " + name + " init coder")
+    }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        print("🍶 " + name + " awakeFromNib")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("🍾 " + name + " viewDidLoad")
@@ -35,5 +50,14 @@ class LogLifeViewController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         print("🍽 " + description + " viewDidDisappear")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        print("🌰 " + name + " didReceiveMemoryWarning")
+    }
+    
+    deinit {
+        print("♻︎ " + name + " deinit")
     }
 }
