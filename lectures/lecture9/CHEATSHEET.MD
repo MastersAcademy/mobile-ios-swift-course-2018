@@ -1,4 +1,7 @@
-1. Expectations extension
+1. Use testable import
+@testable import TestStorage
+
+2. Expectations extension
 import XCTest
 
 extension XCTestCase {
