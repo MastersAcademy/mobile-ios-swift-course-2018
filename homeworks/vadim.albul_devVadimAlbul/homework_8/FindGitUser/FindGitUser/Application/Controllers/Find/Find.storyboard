@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bXl-Xj-MEd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Find View Controller-->
+        <scene sceneID="roL-hs-R6N">
+            <objects>
+                <viewController storyboardIdentifier="FindViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gY8-Y2-Qwc" customClass="FindViewController" customModule="FindGitUser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0P-dU-gEA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Py8-Zc-zcV">
+                                <rect key="frame" x="37.5" y="203.5" width="300" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="FFs-e4-6tv"/>
+                                    <constraint firstAttribute="width" secondItem="Py8-Zc-zcV" secondAttribute="height" multiplier="10:1.5" priority="750" id="gs2-4J-59e"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gY8-Y2-Qwc" id="Yxd-99-iYX"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDn-7S-gKt">
+                                <rect key="frame" x="113.5" y="357" width="148" height="40"/>
+                                <color key="backgroundColor" red="0.11400338303943661" green="0.72758032570422537" blue="0.51421633357183105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="contentEdgeInsets" minX="50" minY="10" maxX="50" maxY="12"/>
+                                <state key="normal" title="Search">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="touchSearch:" destination="gY8-Y2-Qwc" eventType="touchUpInside" id="L2X-0e-Hug"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1176470588" green="0.1333333333" blue="0.24313725489999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Py8-Zc-zcV" firstAttribute="width" secondItem="r0P-dU-gEA" secondAttribute="width" multiplier="0.8" id="6lJ-1q-hLD"/>
+                            <constraint firstItem="Py8-Zc-zcV" firstAttribute="centerY" secondItem="r0P-dU-gEA" secondAttribute="centerY" multiplier="0.75" id="Vom-lF-gbs"/>
+                            <constraint firstItem="nDn-7S-gKt" firstAttribute="centerX" secondItem="r0P-dU-gEA" secondAttribute="centerX" id="eox-Pg-ph7"/>
+                            <constraint firstItem="nDn-7S-gKt" firstAttribute="centerY" secondItem="r0P-dU-gEA" secondAttribute="centerY" multiplier="1.25" id="tLt-2X-Lrc">
+                                <variation key="heightClass=compact" constant="25"/>
+                            </constraint>
+                            <constraint firstItem="Py8-Zc-zcV" firstAttribute="centerX" secondItem="r0P-dU-gEA" secondAttribute="centerX" id="wYm-eE-zwR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8Fp-jf-win"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="R6r-RC-Vzs"/>
+                    <connections>
+                        <outlet property="btnSearch" destination="nDn-7S-gKt" id="gZy-pL-7b0"/>
+                        <outlet property="tfUsername" destination="Py8-Zc-zcV" id="Pfp-8f-W3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aGY-ac-w6V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="968.79999999999995" y="-144.3778110944528"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0az-ks-htF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bXl-Xj-MEd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="e19-zu-zCH">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gY8-Y2-Qwc" kind="relationship" relationship="rootViewController" id="Dgi-Nv-3AU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JMY-Yo-76y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.600000000000001" y="-144.3778110944528"/>
+        </scene>
+    </scenes>
+</document>
