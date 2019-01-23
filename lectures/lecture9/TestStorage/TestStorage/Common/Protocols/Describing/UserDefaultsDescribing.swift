@@ -12,3 +12,7 @@ internal protocol UserDefaultsDescribing: class {
     func string(forKey defaultName: String) -> String?
     func bool(forKey defaultName: String) -> Bool
 }
+
+// sourcery:begin: AutoMockable
+extension UserDefaultsDescribing {}
+// sourcery:end

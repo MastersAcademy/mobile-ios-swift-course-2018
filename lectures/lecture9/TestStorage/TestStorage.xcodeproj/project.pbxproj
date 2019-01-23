@@ -25,7 +25,18 @@
 		92BC6A5A21F664CA00933A8E /* KeychainDescribing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC6A5621F664CA00933A8E /* KeychainDescribing.swift */; };
 		92BC6A5C21F665E200933A8E /* SourceryMarkers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC6A5B21F665E200933A8E /* SourceryMarkers.swift */; };
 		92BC6A5F21F6664F00933A8E /* Sourcery.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92BC6A5E21F6664F00933A8E /* Sourcery.generated.swift */; };
+		92E31BDA21F8D46200E9F239 /* DefaultsStorageTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E31BD921F8D46200E9F239 /* DefaultsStorageTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E31BD421F8D3EB00E9F239 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92BC6A1921F6410500933A8E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 92BC6A2021F6410500933A8E;
+			remoteInfo = TestStorage;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0BE95526E980991AEE26F683 /* Pods-TestStorage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestStorage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TestStorage/Pods-TestStorage.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +60,9 @@
 		92BC6A5621F664CA00933A8E /* KeychainDescribing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainDescribing.swift; sourceTree = "<group>"; };
 		92BC6A5B21F665E200933A8E /* SourceryMarkers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceryMarkers.swift; sourceTree = "<group>"; };
 		92BC6A5E21F6664F00933A8E /* Sourcery.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sourcery.generated.swift; sourceTree = "<group>"; };
+		92E31BCF21F8D3EB00E9F239 /* TestStorageUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestStorageUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		92E31BD321F8D3EB00E9F239 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92E31BD921F8D46200E9F239 /* DefaultsStorageTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsStorageTests.swift; sourceTree = "<group>"; };
 		E669B48631ACF49003D8516C /* Pods_TestStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -58,6 +72,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6280F0D50836B9D518BCE7B7 /* Pods_TestStorage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E31BCC21F8D3EB00E9F239 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				92BC6A2321F6410500933A8E /* TestStorage */,
+				92E31BD021F8D3EB00E9F239 /* TestStorageUnitTests */,
 				92BC6A2221F6410500933A8E /* Products */,
 				093E0A2D5D4DBDAD10D5D364 /* Pods */,
 				1BC52801B2F8FB4A859DE5C3 /* Frameworks */,
@@ -95,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				92BC6A2121F6410500933A8E /* TestStorage.app */,
+				92E31BCF21F8D3EB00E9F239 /* TestStorageUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,6 +203,15 @@
 			path = Describing;
 			sourceTree = "<group>";
 		};
+		92E31BD021F8D3EB00E9F239 /* TestStorageUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				92E31BD321F8D3EB00E9F239 /* Info.plist */,
+				92E31BD921F8D46200E9F239 /* DefaultsStorageTests.swift */,
+			);
+			path = TestStorageUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -188,11 +220,11 @@
 			buildConfigurationList = 92BC6A3321F6410600933A8E /* Build configuration list for PBXNativeTarget "TestStorage" */;
 			buildPhases = (
 				663FF8EEDB150C6D2477A3BF /* [CP] Check Pods Manifest.lock */,
+				92BC6A4D21F6634700933A8E /* Generate code with Sourcery */,
 				92BC6A1D21F6410500933A8E /* Sources */,
 				92BC6A1E21F6410500933A8E /* Frameworks */,
 				92BC6A1F21F6410500933A8E /* Resources */,
 				29938479C8B7A1956F3044F2 /* [CP] Embed Pods Frameworks */,
-				92BC6A4D21F6634700933A8E /* Generate code with Sourcery */,
 			);
 			buildRules = (
 			);
@@ -202,6 +234,24 @@
 			productName = TestStorage;
 			productReference = 92BC6A2121F6410500933A8E /* TestStorage.app */;
 			productType = "com.apple.product-type.application";
+		};
+		92E31BCE21F8D3EB00E9F239 /* TestStorageUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92E31BD821F8D3EB00E9F239 /* Build configuration list for PBXNativeTarget "TestStorageUnitTests" */;
+			buildPhases = (
+				92E31BCB21F8D3EB00E9F239 /* Sources */,
+				92E31BCC21F8D3EB00E9F239 /* Frameworks */,
+				92E31BCD21F8D3EB00E9F239 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				92E31BD521F8D3EB00E9F239 /* PBXTargetDependency */,
+			);
+			name = TestStorageUnitTests;
+			productName = TestStorageUnitTests;
+			productReference = 92E31BCF21F8D3EB00E9F239 /* TestStorageUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -215,6 +265,11 @@
 				TargetAttributes = {
 					92BC6A2021F6410500933A8E = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					92E31BCE21F8D3EB00E9F239 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						TestTargetID = 92BC6A2021F6410500933A8E;
 					};
 				};
 			};
@@ -232,6 +287,7 @@
 			projectRoot = "";
 			targets = (
 				92BC6A2021F6410500933A8E /* TestStorage */,
+				92E31BCE21F8D3EB00E9F239 /* TestStorageUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -245,6 +301,13 @@
 				92BC6A2C21F6410600933A8E /* Assets.xcassets in Resources */,
 				92BC6A2A21F6410500933A8E /* Main.storyboard in Resources */,
 				92BC6A5721F664CA00933A8E /* AutoMockable.stencil in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92E31BCD21F8D3EB00E9F239 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,7 +399,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		92E31BCB21F8D3EB00E9F239 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92E31BDA21F8D46200E9F239 /* DefaultsStorageTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92E31BD521F8D3EB00E9F239 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 92BC6A2021F6410500933A8E /* TestStorage */;
+			targetProxy = 92E31BD421F8D3EB00E9F239 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		92BC6A2821F6410500933A8E /* Main.storyboard */ = {
@@ -510,6 +589,47 @@
 			};
 			name = Release;
 		};
+		92E31BD621F8D3EB00E9F239 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestStorageUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.masters-acedemy.TestStorageUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestStorage.app/TestStorage";
+			};
+			name = Debug;
+		};
+		92E31BD721F8D3EB00E9F239 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TestStorageUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.masters-acedemy.TestStorageUnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestStorage.app/TestStorage";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -527,6 +647,15 @@
 			buildConfigurations = (
 				92BC6A3421F6410600933A8E /* Debug */,
 				92BC6A3521F6410600933A8E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92E31BD821F8D3EB00E9F239 /* Build configuration list for PBXNativeTarget "TestStorageUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92E31BD621F8D3EB00E9F239 /* Debug */,
+				92E31BD721F8D3EB00E9F239 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
