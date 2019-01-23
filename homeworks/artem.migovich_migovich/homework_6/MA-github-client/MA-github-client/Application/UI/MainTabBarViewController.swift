@@ -19,7 +19,7 @@ class MainTabBarViewController: UITabBarController {
         
         let iconSize = CGSize(width: 20, height: 20)
         
-        let repositoriesVC = UINavigationController(rootViewController: RepoTableViewController())
+        let repositoriesVC = UINavigationController(rootViewController: RepositoriesViewController())
         repositoriesVC.tabBarItem.image = UIImage(named: "repo")?.resizeImage(to: iconSize)
         repositoriesVC.tabBarItem.title = "Repositories"
         

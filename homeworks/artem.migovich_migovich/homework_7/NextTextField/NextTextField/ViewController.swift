@@ -27,13 +27,22 @@ class ViewController: UIViewController {
     }
     
     private func notifications() {
-        NotificationCenter.default.addObserver(forName: UIWindow.keyboardWillShowNotification, object: nil, queue: nil) { (nc) in
-            self.view.frame.origin.y = -300
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            guard view.frame.origin.y == 0 else { return }
+            self.view.frame.origin.y -= keyboardHeight
         }
-        
-        NotificationCenter.default.addObserver(forName: UIWindow.keyboardWillHideNotification, object: nil, queue: nil) { (nc) in
-            self.view.frame.origin.y = 0
-        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification) {
+        guard view.frame.origin.y != 0 else { return }
+        self.view.frame.origin.y = 0
     }
     
     private func configureTextFields() {

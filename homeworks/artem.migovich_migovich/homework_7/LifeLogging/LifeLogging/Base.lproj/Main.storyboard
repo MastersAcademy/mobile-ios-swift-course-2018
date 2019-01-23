@@ -18,16 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LO-MB-GYQ">
-                                <rect key="frame" x="129.5" y="427" width="155" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey there !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LO-MB-GYQ">
+                                <rect key="frame" x="125.5" y="427" width="163" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y2c-1L-UW7">
+                                <rect key="frame" x="184.5" y="489" width="45" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Hello">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hex-F0-hth" kind="show" id="w0u-ec-Sct"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7LO-MB-GYQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="S04-R4-gld"/>
+                            <constraint firstItem="Y2c-1L-UW7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Wuk-YP-8nJ"/>
+                            <constraint firstItem="Y2c-1L-UW7" firstAttribute="top" secondItem="7LO-MB-GYQ" secondAttribute="bottom" constant="20" id="ans-LK-2ic"/>
                             <constraint firstItem="7LO-MB-GYQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="br4-Al-QYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -35,6 +47,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hSK-zd-dRo">
+            <objects>
+                <viewController id="hex-F0-hth" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ADL-gT-lg4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bye bye !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrB-EI-YbC">
+                                <rect key="frame" x="139" y="427" width="136" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5aV-2O-63f">
+                                <rect key="frame" x="165" y="489" width="84" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Good bye">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="CSG-7q-AAG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5aV-2O-63f" firstAttribute="centerX" secondItem="ADL-gT-lg4" secondAttribute="centerX" id="8GB-dc-DcW"/>
+                            <constraint firstItem="5aV-2O-63f" firstAttribute="top" secondItem="hrB-EI-YbC" secondAttribute="bottom" constant="20" id="FJu-SP-AVH"/>
+                            <constraint firstItem="hrB-EI-YbC" firstAttribute="centerX" secondItem="ADL-gT-lg4" secondAttribute="centerX" id="tpL-uE-enf"/>
+                            <constraint firstItem="hrB-EI-YbC" firstAttribute="centerY" secondItem="ADL-gT-lg4" secondAttribute="centerY" id="v2y-el-aHv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fu0-Bd-Nw9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cPK-Rp-hUY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="893" y="72"/>
         </scene>
     </scenes>
 </document>

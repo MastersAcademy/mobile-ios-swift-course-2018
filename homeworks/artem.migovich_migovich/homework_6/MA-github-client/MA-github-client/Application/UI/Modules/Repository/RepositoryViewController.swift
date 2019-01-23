@@ -20,8 +20,8 @@ class RepositoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Repository"
-  //      setLabels()
-        //tabBarController?.tabBar.isHidden = true
+//        setLabels()
+//        tabBarController?.tabBar.isHidden = true
     }
     
 //    func setLabels() {

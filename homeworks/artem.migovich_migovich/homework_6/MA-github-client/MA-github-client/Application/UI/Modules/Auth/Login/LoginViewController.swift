@@ -29,7 +29,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func confirmDidPressed(_ sender: UIButton) {
-        
         let nextViewController = MainTabBarViewController()
         
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -39,6 +38,6 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.title = "Log Out"
+        self.title = "Log Out"
     }
 }
