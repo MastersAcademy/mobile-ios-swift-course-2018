@@ -1,0 +1,11 @@
+platform :ios, '12.0'
+
+target 'TestStorage' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TestStorage
+  pod 'KeychainAccess', '3.1.2'
+  pod 'Sourcery', '0.15.0'
+
+end
