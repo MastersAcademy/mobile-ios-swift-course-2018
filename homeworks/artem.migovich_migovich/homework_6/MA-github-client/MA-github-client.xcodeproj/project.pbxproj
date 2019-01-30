@@ -11,14 +11,13 @@
 		CD1540D521C437C500B9AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1540D321C437C500B9AD84 /* LaunchScreen.storyboard */; };
 		CD336AB521C5986400CBBCC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AB421C5986400CBBCC4 /* LoginViewController.swift */; };
 		CD336AB721C5BB6C00CBBCC4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336AB621C5BB6C00CBBCC4 /* LoginViewController.xib */; };
-		CD336AB921C5C50400CBBCC4 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */; };
-		CD336ABB21C5C51600CBBCC4 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */; };
+		CD336AB921C5C50400CBBCC4 /* RepoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AB821C5C50400CBBCC4 /* RepoTableViewController.swift */; };
+		CD336ABB21C5C51600CBBCC4 /* RepoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336ABA21C5C51600CBBCC4 /* RepoViewController.xib */; };
 		CD336ABD21C5C5B400CBBCC4 /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ABC21C5C5B400CBBCC4 /* LoginPresentation.swift */; };
-		CD336ABF21C6F07000CBBCC4 /* RepositoriesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */; };
+		CD336ABF21C6F07000CBBCC4 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ABE21C6F07000CBBCC4 /* RepoTableViewCell.swift */; };
 		CD336AC121C6F0B000CBBCC4 /* RepoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */; };
 		CD336AC721C6F72A00CBBCC4 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AC621C6F72A00CBBCC4 /* UIViewController+Extensions.swift */; };
 		CD336ACD21C71FC800CBBCC4 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */; };
-		CD336ACF21C71FDD00CBBCC4 /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */; };
 		CD336AD121C735F100CBBCC4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AD021C735F100CBBCC4 /* SearchViewController.swift */; };
 		CD336AD321C7360000CBBCC4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336AD221C7360000CBBCC4 /* SearchViewController.xib */; };
 		CD336AD521C7361000CBBCC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AD421C7361000CBBCC4 /* ProfileViewController.swift */; };
@@ -35,14 +34,13 @@
 		CD1540D621C437C500B9AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD336AB421C5986400CBBCC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CD336AB621C5BB6C00CBBCC4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
-		CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		CD336AB821C5C50400CBBCC4 /* RepoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewController.swift; sourceTree = "<group>"; };
+		CD336ABA21C5C51600CBBCC4 /* RepoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoViewController.xib; sourceTree = "<group>"; };
 		CD336ABC21C5C5B400CBBCC4 /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
-		CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresentation.swift; sourceTree = "<group>"; };
+		CD336ABE21C6F07000CBBCC4 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresentation.swift; sourceTree = "<group>"; };
 		CD336AC621C6F72A00CBBCC4 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
-		CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
 		CD336AD021C735F100CBBCC4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		CD336AD221C7360000CBBCC4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		CD336AD421C7361000CBBCC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -142,10 +140,6 @@
 		CD336AB321C5980500CBBCC4 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */,
-				CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */,
-				CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */,
-				CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -194,7 +188,10 @@
 			isa = PBXGroup;
 			children = (
 				CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */,
-				CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */,
+				CD336AB821C5C50400CBBCC4 /* RepoTableViewController.swift */,
+				CD336ABA21C5C51600CBBCC4 /* RepoViewController.xib */,
+				CD336ABE21C6F07000CBBCC4 /* RepoTableViewCell.swift */,
+				CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -281,8 +278,7 @@
 				CD1540D521C437C500B9AD84 /* LaunchScreen.storyboard in Resources */,
 				CD336AD321C7360000CBBCC4 /* SearchViewController.xib in Resources */,
 				CD80828621CAC81D005829D5 /* Assets.xcassets in Resources */,
-				CD336ABB21C5C51600CBBCC4 /* RepositoriesViewController.xib in Resources */,
-				CD336ACF21C71FDD00CBBCC4 /* RepositoryViewController.xib in Resources */,
+				CD336ABB21C5C51600CBBCC4 /* RepoViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,10 +290,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD336ACD21C71FC800CBBCC4 /* RepositoryViewController.swift in Sources */,
-				CD336AB921C5C50400CBBCC4 /* RepositoriesViewController.swift in Sources */,
+				CD336AB921C5C50400CBBCC4 /* RepoTableViewController.swift in Sources */,
 				CD336AD521C7361000CBBCC4 /* ProfileViewController.swift in Sources */,
 				CD80828A21CB1872005829D5 /* MainTabBarViewController.swift in Sources */,
-				CD336ABF21C6F07000CBBCC4 /* RepositoriesPresentation.swift in Sources */,
+				CD336ABF21C6F07000CBBCC4 /* RepoTableViewCell.swift in Sources */,
 				CD336AD121C735F100CBBCC4 /* SearchViewController.swift in Sources */,
 				CD336AB521C5986400CBBCC4 /* LoginViewController.swift in Sources */,
 				CD336AC121C6F0B000CBBCC4 /* RepoPresentation.swift in Sources */,

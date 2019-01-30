@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< HEAD
 		CD5FDA0F21F72FA100006E48 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = CD5FDA0E21F72FA100006E48 /* Podfile */; };
 		CD5FDA1421F772BE00006E48 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5FDA1221F772BE00006E48 /* RepoTableViewCell.swift */; };
 		CD5FDA1521F772BE00006E48 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5FDA1321F772BE00006E48 /* RepoTableViewCell.xib */; };
@@ -40,6 +41,23 @@
 		CDBFEE8D21F62722006F9B5C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CDBFEE8F21F66A08006F9B5C /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		CDBFEE9121F66E7F006F9B5C /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
+=======
+		CDBFEE6821F50E87006F9B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBFEE6721F50E87006F9B5C /* AppDelegate.swift */; };
+		CDBFEE6A21F50E87006F9B5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBFEE6921F50E87006F9B5C /* ViewController.swift */; };
+		CDBFEE6D21F50E87006F9B5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBFEE6B21F50E87006F9B5C /* Main.storyboard */; };
+		CDBFEE6F21F50E87006F9B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDBFEE6E21F50E87006F9B5C /* Assets.xcassets */; };
+		CDBFEE7221F50E87006F9B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDBFEE7021F50E87006F9B5C /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CDBFEE6421F50E87006F9B5C /* GitHubApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDBFEE6721F50E87006F9B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDBFEE6921F50E87006F9B5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDBFEE6C21F50E87006F9B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDBFEE6E21F50E87006F9B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDBFEE7121F50E87006F9B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDBFEE7321F50E87006F9B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+>>>>>>> master
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +71,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< HEAD
 		CD5FDA1821F8B93700006E48 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +86,11 @@
 			isa = PBXGroup;
 			children = (
 				CD5FDA0E21F72FA100006E48 /* Podfile */,
+=======
+		CDBFEE5B21F50E86006F9B5C = {
+			isa = PBXGroup;
+			children = (
+>>>>>>> master
 				CDBFEE6621F50E87006F9B5C /* GitHubApi */,
 				CDBFEE6521F50E87006F9B5C /* Products */,
 			);
@@ -83,14 +107,24 @@
 		CDBFEE6621F50E87006F9B5C /* GitHubApi */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				CDBFEE8321F607DD006F9B5C /* Application */,
 				CDBFEE7021F50E87006F9B5C /* LaunchScreen.storyboard */,
 				CDBFEE7321F50E87006F9B5C /* Info.plist */,
 				CDBFEE8D21F62722006F9B5C /* Images.xcassets */,
+=======
+				CDBFEE6721F50E87006F9B5C /* AppDelegate.swift */,
+				CDBFEE6921F50E87006F9B5C /* ViewController.swift */,
+				CDBFEE6B21F50E87006F9B5C /* Main.storyboard */,
+				CDBFEE6E21F50E87006F9B5C /* Assets.xcassets */,
+				CDBFEE7021F50E87006F9B5C /* LaunchScreen.storyboard */,
+				CDBFEE7321F50E87006F9B5C /* Info.plist */,
+>>>>>>> master
 			);
 			path = GitHubApi;
 			sourceTree = "<group>";
 		};
+<<<<<<< HEAD
 		CDBFEE8321F607DD006F9B5C /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +181,8 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+=======
+>>>>>>> master
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -205,12 +241,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				CD5FDA0F21F72FA100006E48 /* Podfile in Resources */,
 				CDBFEE7221F50E87006F9B5C /* LaunchScreen.storyboard in Resources */,
 				CDBFEE8E21F62722006F9B5C /* Images.xcassets in Resources */,
 				CD5FDA1521F772BE00006E48 /* RepoTableViewCell.xib in Resources */,
 				CDBFEE8021F518D2006F9B5C /* LoginView.xib in Resources */,
 				CDBFEE7C21F51468006F9B5C /* ProfileViewController.xib in Resources */,
+=======
+				CDBFEE7221F50E87006F9B5C /* LaunchScreen.storyboard in Resources */,
+				CDBFEE6F21F50E87006F9B5C /* Assets.xcassets in Resources */,
+				CDBFEE6D21F50E87006F9B5C /* Main.storyboard in Resources */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+<<<<<<< HEAD
 				CDBFEE7B21F51468006F9B5C /* ProfileViewController.swift in Sources */,
 				CDBFEE9021F66A08006F9B5C /* Profile.swift in Sources */,
 				CDBFEE6A21F50E87006F9B5C /* ViewController.swift in Sources */,
@@ -229,12 +272,27 @@
 				CDBFEE9221F66E7F006F9B5C /* Repositories.swift in Sources */,
 				CDBFEE6821F50E87006F9B5C /* AppDelegate.swift in Sources */,
 				CDBFEE8221F518E6006F9B5C /* LoginViewController.swift in Sources */,
+=======
+				CDBFEE6A21F50E87006F9B5C /* ViewController.swift in Sources */,
+				CDBFEE6821F50E87006F9B5C /* AppDelegate.swift in Sources */,
+>>>>>>> master
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+<<<<<<< HEAD
+=======
+		CDBFEE6B21F50E87006F9B5C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDBFEE6C21F50E87006F9B5C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+>>>>>>> master
 		CDBFEE7021F50E87006F9B5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -365,6 +423,10 @@
 		CDBFEE7721F50E87006F9B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+=======
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+>>>>>>> master
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCY45QFZ9K;
 				INFOPLIST_FILE = GitHubApi/Info.plist;
@@ -382,6 +444,10 @@
 		CDBFEE7821F50E87006F9B5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+<<<<<<< HEAD
+=======
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+>>>>>>> master
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JCY45QFZ9K;
 				INFOPLIST_FILE = GitHubApi/Info.plist;
