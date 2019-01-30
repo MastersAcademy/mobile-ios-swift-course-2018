@@ -1,15 +1,19 @@
 //
 //  RepositoryTableViewCell.swift
-//  MA-github-client
+//  GitHubApi
 //
-//  Created by Myhovych on 1/23/19.
+//  Created by Myhovych on 1/22/19.
 //  Copyright © 2019 Artem Migovich. All rights reserved.
 //
 
 import UIKit
 
-class RepositoryTableViewCell: UITableViewCell {
+class RepoTableViewCell: UITableViewCell {
 
+    enum Identifier {
+        static let RepoTableViewCell = "RepoTableViewCell"
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

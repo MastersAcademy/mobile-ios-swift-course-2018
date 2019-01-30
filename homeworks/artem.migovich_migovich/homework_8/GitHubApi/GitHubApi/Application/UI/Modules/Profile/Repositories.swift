@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Repositories: Decodable {
+struct  Repositories: Decodable {
     enum CodingKeys: String, CodingKey {
         case repos
     }
@@ -23,6 +23,7 @@ struct Repository: Decodable {
         case name
         case starsCount = "stargazers_count"
     }
+    
     
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
