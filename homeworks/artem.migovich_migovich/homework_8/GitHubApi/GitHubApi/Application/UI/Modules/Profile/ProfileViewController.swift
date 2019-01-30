@@ -62,12 +62,12 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
                 DispatchQueue.main.async {
                     self.profilePictureImageView.downloaded(from: profile.profilePicture)
                     self.fullnameLabel.text = profile.fullName
-                    if profile.publicRepositories != nil {
-                        self.repositoriesCountLabel.text = String(profile.publicRepositories!)
-                    } else { return }
-                    if profile.followers != nil {
-                        self.followersCountLabel.text = String(profile.followers!)
-                    } else { return }
+
+                    guard profile.publicRepositories != nil else { return }
+                    self.repositoriesCountLabel.text = String(profile.publicRepositories!)
+                    
+                    guard profile.followers != nil else { return }
+                    self.followersCountLabel.text = String(profile.followers!)
                 }
             } catch let error {
                 print(error)
@@ -106,9 +106,10 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // create a new cell if needed or reuse an old one
         let cell = self.repositoriesTableView.dequeueReusableCell(withIdentifier: Identifier.RepoTableViewCell, for: indexPath) as! RepoTableViewCell
-        // set the text from the data model
-        cell.repoNameLabel.text = repositories[indexPath.row].name
-        cell.starsCountLabel.text = "\(repositories[indexPath.row].starsCount!)"
+        // get repository property
+        let repository = self.repositories[indexPath.row]
+        // update cell with repository prop
+        cell.setRepository(repo: repository)
         return cell
     }
     

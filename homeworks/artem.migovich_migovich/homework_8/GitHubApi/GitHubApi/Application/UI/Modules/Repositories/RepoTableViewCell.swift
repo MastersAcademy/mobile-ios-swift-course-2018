@@ -15,4 +15,10 @@ enum Identifier {
 class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var starsCountLabel: UILabel!
+    
+    // set repository for cell update
+    func setRepository(repo: Repository) {
+        repoNameLabel.text = repo.name
+        starsCountLabel.text = "\(repo.starsCount!)"
+    }
 }
