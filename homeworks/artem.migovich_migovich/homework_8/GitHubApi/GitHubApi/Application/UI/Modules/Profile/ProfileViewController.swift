@@ -8,7 +8,6 @@
 
 import UIKit
 
-<<<<<<< HEAD
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
 
     @IBOutlet weak var profilePictureImageView: UIImageView!
@@ -41,18 +40,6 @@ class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewD
         
         repositoriesTableView.delegate = self
         repositoriesTableView.dataSource = self
-=======
-class ProfileViewController: UIViewController {
-
-    @IBOutlet weak var usernameLabel: UILabel!
-    
-    var username = String()
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        usernameLabel.text = username
->>>>>>> master
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,7 +47,6 @@ class ProfileViewController: UIViewController {
         // Show the Navigation Bar
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
-<<<<<<< HEAD
 
     func profileParser() {
         let urlString = "https://api.github.com/users/\(username)"
@@ -130,6 +116,4 @@ class ProfileViewController: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
     }
-=======
->>>>>>> master
 }

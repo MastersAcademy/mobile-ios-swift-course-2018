@@ -9,18 +9,12 @@
 import Foundation
 import UIKit
 
-<<<<<<< HEAD
 //Set image from url
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         DispatchQueue.main.async {
             self.contentMode = mode
         }
-=======
-extension UIImageView {
-    func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
-        contentMode = mode
->>>>>>> master
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -38,7 +32,6 @@ extension UIImageView {
         downloaded(from: url, contentMode: mode)
     }
 }
-<<<<<<< HEAD
 //Inverse image colors
 extension ProfileViewController {
     func invertedImage(imageView: UIImageView) {
@@ -52,5 +45,3 @@ extension ProfileViewController {
         } else { print("Image couldn't load") }
     }
 }
-=======
->>>>>>> master

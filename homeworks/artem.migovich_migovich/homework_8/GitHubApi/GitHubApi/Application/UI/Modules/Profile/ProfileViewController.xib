@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="GitHubApi" customModuleProvider="target">
             <connections>
-<<<<<<< HEAD
                 <outlet property="followersCountLabel" destination="Yh7-I6-FsI" id="kCz-nf-pnY"/>
                 <outlet property="followersImageView" destination="FM8-gy-P5D" id="vzs-cF-XuT"/>
                 <outlet property="fullnameLabel" destination="PBE-sB-w29" id="Wal-1t-9G1"/>
@@ -20,8 +19,6 @@
                 <outlet property="repositoriesCountLabel" destination="oAr-Bc-d9e" id="M7M-EX-zNc"/>
                 <outlet property="repositoriesImageView" destination="8h4-yX-3SO" id="UPM-j7-XJc"/>
                 <outlet property="repositoriesTableView" destination="z2t-So-shr" id="rWN-0q-aVq"/>
-=======
->>>>>>> master
                 <outlet property="usernameLabel" destination="f5d-hw-3e2" id="dQD-uQ-qqC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -31,7 +28,6 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-<<<<<<< HEAD
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="z2t-So-shr">
                     <rect key="frame" x="20" y="401" width="335" height="256"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -140,10 +136,6 @@
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAr-Bc-d9e">
                     <rect key="frame" x="244" y="364" width="11" height="22"/>
-=======
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5d-hw-3e2">
-                    <rect key="frame" x="147.5" y="323" width="80.5" height="21.5"/>
->>>>>>> master
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -151,7 +143,6 @@
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-<<<<<<< HEAD
                 <constraint firstItem="z2t-So-shr" firstAttribute="leading" secondItem="f5d-hw-3e2" secondAttribute="trailing" constant="90" id="0nY-WI-t9l"/>
                 <constraint firstItem="z2t-So-shr" firstAttribute="leading" secondItem="FM8-gy-P5D" secondAttribute="trailing" constant="16.5" id="1ZP-8f-nfV"/>
                 <constraint firstItem="FM8-gy-P5D" firstAttribute="leading" secondItem="U5l-dV-3Vg" secondAttribute="trailing" constant="20" id="3Ow-9N-yvg"/>
@@ -287,13 +278,6 @@
                 </mask>
             </variation>
             <point key="canvasLocation" x="53.523238380809602" y="47.200000000000003"/>
-=======
-                <constraint firstItem="f5d-hw-3e2" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="CiW-yw-ztu"/>
-                <constraint firstItem="f5d-hw-3e2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TCj-kH-Zys"/>
-            </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
->>>>>>> master
         </view>
     </objects>
 </document>
