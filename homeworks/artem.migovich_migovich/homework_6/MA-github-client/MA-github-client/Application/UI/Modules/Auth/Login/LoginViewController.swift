@@ -1,4 +1,4 @@
-//
+ //
 //  LoginViewController.swift
 //  MA-github-client
 //
@@ -6,25 +6,39 @@
 //  Copyright © 2018 Artem Migovich. All rights reserved.
 //
 
-import UIKit
+import UIKit.UIViewController
 
 class LoginViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    
+    
+    @IBOutlet weak var confirmButton: UIButton!
+    
+    var presentation: LoginPresentation? {
+        willSet {
+            loadViewIfNeeded()
+        }
+        didSet {
+            updateViewWithPresentation()
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func updateViewWithPresentation() {
+        presentation.map { item in
+            
+        }
     }
-    */
-
+    
+    @IBAction func confirmDidPressed(_ sender: UIButton) {
+        
+        let nextViewController = MainTabBarViewController()
+        
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        navigationController?.pushViewController(nextViewController,
+                                                 animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        //self.title = "Log Out"
+    }
 }

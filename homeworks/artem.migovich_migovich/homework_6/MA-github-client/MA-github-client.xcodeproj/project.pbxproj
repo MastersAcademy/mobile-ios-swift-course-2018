@@ -8,20 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		CD1540CB21C437C400B9AD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1540CA21C437C400B9AD84 /* AppDelegate.swift */; };
-		CD1540CD21C437C400B9AD84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1540CC21C437C400B9AD84 /* ViewController.swift */; };
-		CD1540D021C437C400B9AD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1540CE21C437C400B9AD84 /* Main.storyboard */; };
-		CD1540D221C437C500B9AD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1540D121C437C500B9AD84 /* Assets.xcassets */; };
 		CD1540D521C437C500B9AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1540D321C437C500B9AD84 /* LaunchScreen.storyboard */; };
+		CD336AB521C5986400CBBCC4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AB421C5986400CBBCC4 /* LoginViewController.swift */; };
+		CD336AB721C5BB6C00CBBCC4 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336AB621C5BB6C00CBBCC4 /* LoginViewController.xib */; };
+		CD336AB921C5C50400CBBCC4 /* RepositoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */; };
+		CD336ABB21C5C51600CBBCC4 /* RepositoriesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */; };
+		CD336ABD21C5C5B400CBBCC4 /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ABC21C5C5B400CBBCC4 /* LoginPresentation.swift */; };
+		CD336ABF21C6F07000CBBCC4 /* RepositoriesPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */; };
+		CD336AC121C6F0B000CBBCC4 /* RepoPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */; };
+		CD336AC721C6F72A00CBBCC4 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AC621C6F72A00CBBCC4 /* UIViewController+Extensions.swift */; };
+		CD336ACD21C71FC800CBBCC4 /* RepositoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */; };
+		CD336ACF21C71FDD00CBBCC4 /* RepositoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */; };
+		CD336AD121C735F100CBBCC4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AD021C735F100CBBCC4 /* SearchViewController.swift */; };
+		CD336AD321C7360000CBBCC4 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336AD221C7360000CBBCC4 /* SearchViewController.xib */; };
+		CD336AD521C7361000CBBCC4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD336AD421C7361000CBBCC4 /* ProfileViewController.swift */; };
+		CD336AD721C7361F00CBBCC4 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD336AD621C7361F00CBBCC4 /* ProfileViewController.xib */; };
+		CD80828621CAC81D005829D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD80828521CAC81D005829D5 /* Assets.xcassets */; };
+		CD80828A21CB1872005829D5 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD80828921CB1872005829D5 /* MainTabBarViewController.swift */; };
+		CD9A8AC821D0210600CADAD2 /* ProfilePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9A8AC721D0210500CADAD2 /* ProfilePresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CD1540C721C437C400B9AD84 /* MA-github-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MA-github-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1540CA21C437C400B9AD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD1540CC21C437C400B9AD84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CD1540CF21C437C400B9AD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		CD1540D121C437C500B9AD84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1540D421C437C500B9AD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1540D621C437C500B9AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD336AB421C5986400CBBCC4 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		CD336AB621C5BB6C00CBBCC4 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesViewController.swift; sourceTree = "<group>"; };
+		CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoriesViewController.xib; sourceTree = "<group>"; };
+		CD336ABC21C5C5B400CBBCC4 /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
+		CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoriesPresentation.swift; sourceTree = "<group>"; };
+		CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoPresentation.swift; sourceTree = "<group>"; };
+		CD336AC621C6F72A00CBBCC4 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryViewController.swift; sourceTree = "<group>"; };
+		CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryViewController.xib; sourceTree = "<group>"; };
+		CD336AD021C735F100CBBCC4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CD336AD221C7360000CBBCC4 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		CD336AD421C7361000CBBCC4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CD336AD621C7361F00CBBCC4 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		CD80828521CAC81D005829D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD80828921CB1872005829D5 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		CD9A8AC721D0210500CADAD2 /* ProfilePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +82,140 @@
 		CD1540C921C437C400B9AD84 /* MA-github-client */ = {
 			isa = PBXGroup;
 			children = (
-				CD1540CA21C437C400B9AD84 /* AppDelegate.swift */,
-				CD1540CC21C437C400B9AD84 /* ViewController.swift */,
-				CD1540CE21C437C400B9AD84 /* Main.storyboard */,
-				CD1540D121C437C500B9AD84 /* Assets.xcassets */,
-				CD1540D321C437C500B9AD84 /* LaunchScreen.storyboard */,
+				CD336AC821C6F99200CBBCC4 /* Base.Iproj */,
+				CD336AC221C6F64700CBBCC4 /* Library */,
+				CD336AAD21C597B600CBBCC4 /* Application */,
 				CD1540D621C437C500B9AD84 /* Info.plist */,
+				CD80828521CAC81D005829D5 /* Assets.xcassets */,
 			);
 			path = "MA-github-client";
+			sourceTree = "<group>";
+		};
+		CD336AAD21C597B600CBBCC4 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AAE21C597C900CBBCC4 /* UI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		CD336AAE21C597C900CBBCC4 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD1540CA21C437C400B9AD84 /* AppDelegate.swift */,
+				CD80828921CB1872005829D5 /* MainTabBarViewController.swift */,
+				CD336AB021C597E500CBBCC4 /* Modules */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CD336AB021C597E500CBBCC4 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CD336ACB21C71FA700CBBCC4 /* Profile */,
+				CD336ACA21C71F9A00CBBCC4 /* Search */,
+				CD336AC921C71F9000CBBCC4 /* Repository */,
+				CD336AB321C5980500CBBCC4 /* Main */,
+				CD336AB121C597F100CBBCC4 /* Auth */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		CD336AB121C597F100CBBCC4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AB221C597F800CBBCC4 /* Login */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		CD336AB221C597F800CBBCC4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AB421C5986400CBBCC4 /* LoginViewController.swift */,
+				CD336AB621C5BB6C00CBBCC4 /* LoginViewController.xib */,
+				CD336ABC21C5C5B400CBBCC4 /* LoginPresentation.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CD336AB321C5980500CBBCC4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AB821C5C50400CBBCC4 /* RepositoriesViewController.swift */,
+				CD336ABA21C5C51600CBBCC4 /* RepositoriesViewController.xib */,
+				CD336ABE21C6F07000CBBCC4 /* RepositoriesPresentation.swift */,
+				CD336AC021C6F0B000CBBCC4 /* RepoPresentation.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		CD336AC221C6F64700CBBCC4 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AC321C6F66F00CBBCC4 /* Standart */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		CD336AC321C6F66F00CBBCC4 /* Standart */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AC421C6F6A300CBBCC4 /* UIKit */,
+			);
+			path = Standart;
+			sourceTree = "<group>";
+		};
+		CD336AC421C6F6A300CBBCC4 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AC521C6F6BB00CBBCC4 /* UIViewController */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		CD336AC521C6F6BB00CBBCC4 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AC621C6F72A00CBBCC4 /* UIViewController+Extensions.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		CD336AC821C6F99200CBBCC4 /* Base.Iproj */ = {
+			isa = PBXGroup;
+			children = (
+				CD1540D321C437C500B9AD84 /* LaunchScreen.storyboard */,
+			);
+			path = Base.Iproj;
+			sourceTree = "<group>";
+		};
+		CD336AC921C71F9000CBBCC4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CD336ACC21C71FC800CBBCC4 /* RepositoryViewController.swift */,
+				CD336ACE21C71FDD00CBBCC4 /* RepositoryViewController.xib */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CD336ACA21C71F9A00CBBCC4 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AD021C735F100CBBCC4 /* SearchViewController.swift */,
+				CD336AD221C7360000CBBCC4 /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		CD336ACB21C71FA700CBBCC4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				CD336AD421C7361000CBBCC4 /* ProfileViewController.swift */,
+				CD336AD621C7361F00CBBCC4 /* ProfileViewController.xib */,
+				CD9A8AC721D0210500CADAD2 /* ProfilePresentation.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -122,9 +276,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD336AD721C7361F00CBBCC4 /* ProfileViewController.xib in Resources */,
+				CD336AB721C5BB6C00CBBCC4 /* LoginViewController.xib in Resources */,
 				CD1540D521C437C500B9AD84 /* LaunchScreen.storyboard in Resources */,
-				CD1540D221C437C500B9AD84 /* Assets.xcassets in Resources */,
-				CD1540D021C437C400B9AD84 /* Main.storyboard in Resources */,
+				CD336AD321C7360000CBBCC4 /* SearchViewController.xib in Resources */,
+				CD80828621CAC81D005829D5 /* Assets.xcassets in Resources */,
+				CD336ABB21C5C51600CBBCC4 /* RepositoriesViewController.xib in Resources */,
+				CD336ACF21C71FDD00CBBCC4 /* RepositoryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,7 +293,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD1540CD21C437C400B9AD84 /* ViewController.swift in Sources */,
+				CD336ACD21C71FC800CBBCC4 /* RepositoryViewController.swift in Sources */,
+				CD336AB921C5C50400CBBCC4 /* RepositoriesViewController.swift in Sources */,
+				CD336AD521C7361000CBBCC4 /* ProfileViewController.swift in Sources */,
+				CD80828A21CB1872005829D5 /* MainTabBarViewController.swift in Sources */,
+				CD336ABF21C6F07000CBBCC4 /* RepositoriesPresentation.swift in Sources */,
+				CD336AD121C735F100CBBCC4 /* SearchViewController.swift in Sources */,
+				CD336AB521C5986400CBBCC4 /* LoginViewController.swift in Sources */,
+				CD336AC121C6F0B000CBBCC4 /* RepoPresentation.swift in Sources */,
+				CD336AC721C6F72A00CBBCC4 /* UIViewController+Extensions.swift in Sources */,
+				CD9A8AC821D0210600CADAD2 /* ProfilePresentation.swift in Sources */,
+				CD336ABD21C5C5B400CBBCC4 /* LoginPresentation.swift in Sources */,
 				CD1540CB21C437C400B9AD84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,14 +311,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CD1540CE21C437C400B9AD84 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CD1540CF21C437C400B9AD84 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CD1540D321C437C500B9AD84 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

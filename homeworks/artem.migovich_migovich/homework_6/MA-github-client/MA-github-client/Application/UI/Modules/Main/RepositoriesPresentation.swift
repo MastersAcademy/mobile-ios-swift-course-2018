@@ -8,6 +8,16 @@
 
 import UIKit
 
-class RepositoriesPresentation: NSObject {
+class RepositoriesPresentation {
+    var items: [RepoPresentation]
+    
+    init(items: [RepoPresentation]) {
+        self.items = items
+    }
+}
 
+extension RepositoriesPresentation {
+    class func makeDefault() -> RepositoriesPresentation {
+        return RepositoriesPresentation(items: [.makeDefault()])
+    }
 }
