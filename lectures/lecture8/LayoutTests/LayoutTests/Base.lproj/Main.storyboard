@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad12_9rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LayoutTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-avatar" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-w9-DYw">
+                                <rect key="frame" x="20" y="44" width="984" height="984"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="IVP-or-cFr"/>
+                                    <constraint firstAttribute="height" constant="270" id="JSg-s7-YE4">
+                                        <variation key="heightClass=compact" constant="230"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" secondItem="Szz-w9-DYw" secondAttribute="height" multiplier="1:1" id="lLG-gQ-Kok"/>
+                                    <constraint firstAttribute="width" secondItem="Szz-w9-DYw" secondAttribute="height" multiplier="1:1" id="m4q-Ok-Lcv"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JSg-s7-YE4"/>
+                                        <exclude reference="m4q-Ok-Lcv"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="JSg-s7-YE4"/>
+                                        <exclude reference="lLG-gQ-Kok"/>
+                                        <include reference="m4q-Ok-Lcv"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p2S-WK-u9K">
+                                <rect key="frame" x="469" y="1038" width="86" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="geO-tG-nvA">
+                                        <variation key="heightClass=compact" constant="15"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="geO-tG-nvA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="geO-tG-nvA"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DcD-Uk-jtG">
+                                <rect key="frame" x="20" y="1068.5" width="984" height="257.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Szz-w9-DYw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BCr-ou-VMU"/>
+                            <constraint firstAttribute="bottom" secondItem="p2S-WK-u9K" secondAttribute="bottom" constant="20" id="BPC-xu-mlD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DcD-Uk-jtG" secondAttribute="bottom" constant="20" id="Ed4-Hk-7dT"/>
+                            <constraint firstItem="Szz-w9-DYw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="OAq-jy-1h9"/>
+                            <constraint firstItem="DcD-Uk-jtG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PvA-2H-n9c"/>
+                            <constraint firstItem="DcD-Uk-jtG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UXr-DF-DJM"/>
+                            <constraint firstItem="p2S-WK-u9K" firstAttribute="centerX" secondItem="Szz-w9-DYw" secondAttribute="centerX" id="UrY-Bz-l8i"/>
+                            <constraint firstItem="p2S-WK-u9K" firstAttribute="top" secondItem="Szz-w9-DYw" secondAttribute="bottom" constant="10" id="V6B-f3-f82"/>
+                            <constraint firstItem="DcD-Uk-jtG" firstAttribute="leading" secondItem="Szz-w9-DYw" secondAttribute="trailing" constant="20" id="XNT-f1-VQi">
+                                <variation key="heightClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="DcD-Uk-jtG" firstAttribute="top" secondItem="p2S-WK-u9K" secondAttribute="bottom" constant="10" id="ZFN-yD-Jsb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DcD-Uk-jtG" secondAttribute="trailing" constant="20" id="igB-w9-9KW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Szz-w9-DYw" secondAttribute="trailing" constant="20" id="jGA-fK-tHF"/>
+                            <constraint firstItem="DcD-Uk-jtG" firstAttribute="height" secondItem="Szz-w9-DYw" secondAttribute="height" priority="250" id="oeE-id-ZoA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DcD-Uk-jtG" secondAttribute="trailing" constant="20" id="oiA-FU-xbF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DcD-Uk-jtG" secondAttribute="bottom" constant="20" id="usq-ME-zFn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="igB-w9-9KW"/>
+                                <exclude reference="usq-ME-zFn"/>
+                                <exclude reference="BPC-xu-mlD"/>
+                                <exclude reference="PvA-2H-n9c"/>
+                                <exclude reference="XNT-f1-VQi"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="Ed4-Hk-7dT"/>
+                                <include reference="igB-w9-9KW"/>
+                                <exclude reference="jGA-fK-tHF"/>
+                                <exclude reference="oiA-FU-xbF"/>
+                                <include reference="usq-ME-zFn"/>
+                                <include reference="BPC-xu-mlD"/>
+                                <include reference="PvA-2H-n9c"/>
+                                <exclude reference="UXr-DF-DJM"/>
+                                <include reference="XNT-f1-VQi"/>
+                                <exclude reference="ZFN-yD-Jsb"/>
+                                <exclude reference="oeE-id-ZoA"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageTrailingConstraint" destination="jGA-fK-tHF" id="Ybl-4t-awm"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="134.1549295774648" y="131.25"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="user-avatar" width="280" height="280"/>
+    </resources>
+</document>

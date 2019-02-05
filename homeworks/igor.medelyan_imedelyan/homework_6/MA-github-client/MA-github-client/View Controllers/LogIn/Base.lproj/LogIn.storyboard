@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CF4-Vb-PW9">
+                                <rect key="frame" x="50" y="260" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" textContentType="username"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Orb-mP-G3C">
+                                <rect key="frame" x="50" y="330" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vog-Ii-Dm6">
+                                <rect key="frame" x="50" y="525" width="275" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Sing In">
+                                    <color key="titleColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="2Ql-6G-DQb" kind="show" id="NRg-kW-HPq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Orb-mP-G3C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="3uR-ty-Dhh"/>
+                            <constraint firstItem="Vog-Ii-Dm6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="Ald-mk-8gw"/>
+                            <constraint firstItem="CF4-Vb-PW9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="E7h-rf-hdb"/>
+                            <constraint firstItem="CF4-Vb-PW9" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" multiplier="0.8" id="IEv-eJ-jqx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vog-Ii-Dm6" secondAttribute="bottom" constant="100" id="LkR-PY-BTr"/>
+                            <constraint firstItem="Orb-mP-G3C" firstAttribute="top" secondItem="CF4-Vb-PW9" secondAttribute="bottom" constant="40" id="Ypr-Vj-GHQ"/>
+                            <constraint firstItem="CF4-Vb-PW9" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dUY-NL-Jbf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CF4-Vb-PW9" secondAttribute="trailing" constant="50" id="kzB-8U-vBw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vog-Ii-Dm6" secondAttribute="trailing" constant="50" id="pJu-nY-mHV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Orb-mP-G3C" secondAttribute="trailing" constant="50" id="w86-CC-LE3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-935" y="-49"/>
+        </scene>
+        <!--RepositoriesVC-->
+        <scene sceneID="hrO-L7-KhL">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Repositories" storyboardName="Repositories" referencedIdentifier="RepositoriesVC" id="lwC-Pk-OKL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ufa-rc-Fnz"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UkZ-bs-6o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="684" y="-255"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="NSY-01-kfJ">
+            <objects>
+                <tabBarController id="2Ql-6G-DQb" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IgK-3d-8Uj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lwC-Pk-OKL" kind="relationship" relationship="viewControllers" id="Z3I-rF-CT7"/>
+                        <segue destination="dEK-Me-cOi" kind="relationship" relationship="viewControllers" id="b7w-62-ZlS"/>
+                        <segue destination="bla-l5-lD4" kind="relationship" relationship="viewControllers" id="GD2-xK-6JV"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWr-gU-MgL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-110" y="-49"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="qWu-Ko-btH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Search" storyboardName="Search" referencedIdentifier="SearchVC" id="dEK-Me-cOi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fjl-ve-Oa6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KH6-Km-Lwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="657" y="-49"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="PLL-5T-gGy">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="Profile" storyboardName="Profile" referencedIdentifier="ProfileVC" id="bla-l5-lD4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Ljd-98-eQY"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="luZ-hq-NJn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="151"/>
+        </scene>
+    </scenes>
+</document>

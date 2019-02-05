@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DFP-VS-BBh">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Item-->
+        <scene sceneID="hef-W1-Qxa">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NCv-gl-HZx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="zwd-9m-Prd" customClass="ProfileViewController" customModule="MA_github_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="M4l-Nd-EgO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Antonio_Banderas_1997" translatesAutoresizingMaskIntoConstraints="NO" id="uzO-p2-Zx2">
+                                <rect key="frame" x="87.666666666666686" y="98" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="8jf-PA-Xjn"/>
+                                    <constraint firstAttribute="height" constant="200" id="N6F-hM-TiZ"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="banderovez" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HdW-Ow-efs">
+                                <rect key="frame" x="50" y="327.66666666666669" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfY-jR-Fqm">
+                                <rect key="frame" x="50" y="308" width="275" height="14.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Antonio Banderas" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTr-Hf-k5p">
+                                <rect key="frame" x="50" y="387" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibx-Y9-S61">
+                                <rect key="frame" x="50" y="367.66666666666669" width="275" height="14.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Biography" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WSW-1F-ehP">
+                                <rect key="frame" x="50" y="427" width="275" height="14.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FNL-36-PYg">
+                                <rect key="frame" x="50" y="446.66666666666669" width="275" height="117.66666666666669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">José Antonio Domínguez Bandera[1] (born 10 August 1960), known professionally as Antonio Banderas, is a Spanish actor, producer, and singer.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="banderovez@ukr.net" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5oX-c8-0Xh">
+                                <rect key="frame" x="50" y="594.33333333333337" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4D-rV-1E6">
+                                <rect key="frame" x="50" y="574.33333333333337" width="275" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Spain" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Oz-eM-CKO">
+                                <rect key="frame" x="50" y="654.33333333333337" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4V-sP-DiO">
+                                <rect key="frame" x="50" y="634.33333333333337" width="275" height="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="WSW-1F-ehP" secondAttribute="trailing" constant="50" id="6Sn-ln-YQ4"/>
+                            <constraint firstItem="WSW-1F-ehP" firstAttribute="top" secondItem="tTr-Hf-k5p" secondAttribute="bottom" constant="10" id="6aX-1D-St8"/>
+                            <constraint firstItem="7Oz-eM-CKO" firstAttribute="top" secondItem="x4V-sP-DiO" secondAttribute="bottom" constant="5" id="6h8-Qf-osn"/>
+                            <constraint firstItem="x4D-rV-1E6" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="BxQ-gQ-CA6"/>
+                            <constraint firstItem="uzO-p2-Zx2" firstAttribute="centerX" secondItem="Yq2-lp-Hg3" secondAttribute="centerX" id="EnC-39-T13"/>
+                            <constraint firstItem="uzO-p2-Zx2" firstAttribute="top" secondItem="Yq2-lp-Hg3" secondAttribute="top" constant="10" id="F4I-21-SOB"/>
+                            <constraint firstItem="HdW-Ow-efs" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="KCT-uY-h15"/>
+                            <constraint firstItem="x4V-sP-DiO" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="M2h-Au-cU9"/>
+                            <constraint firstItem="Ibx-Y9-S61" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="Ppa-jZ-456"/>
+                            <constraint firstItem="Ibx-Y9-S61" firstAttribute="top" secondItem="HdW-Ow-efs" secondAttribute="bottom" constant="10" id="Qvg-eK-baW"/>
+                            <constraint firstItem="WSW-1F-ehP" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="RmO-wm-M1d"/>
+                            <constraint firstItem="tTr-Hf-k5p" firstAttribute="top" secondItem="Ibx-Y9-S61" secondAttribute="bottom" constant="5" id="RsQ-JP-JXF"/>
+                            <constraint firstItem="tTr-Hf-k5p" firstAttribute="top" secondItem="Ibx-Y9-S61" secondAttribute="bottom" constant="5" id="SJh-LQ-Zio"/>
+                            <constraint firstItem="x4D-rV-1E6" firstAttribute="top" secondItem="FNL-36-PYg" secondAttribute="bottom" constant="10" id="UDZ-p5-ZEU"/>
+                            <constraint firstItem="FNL-36-PYg" firstAttribute="top" secondItem="WSW-1F-ehP" secondAttribute="bottom" constant="5" id="ZlZ-Iv-WXm"/>
+                            <constraint firstItem="5oX-c8-0Xh" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="b2n-Xs-dJW"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="x4D-rV-1E6" secondAttribute="trailing" constant="50" id="bW1-o3-lY1"/>
+                            <constraint firstItem="HdW-Ow-efs" firstAttribute="top" secondItem="rfY-jR-Fqm" secondAttribute="bottom" constant="5" id="cOq-EL-6K2"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="7Oz-eM-CKO" secondAttribute="bottom" constant="10" id="ebu-2t-LlE"/>
+                            <constraint firstItem="rfY-jR-Fqm" firstAttribute="top" secondItem="uzO-p2-Zx2" secondAttribute="bottom" constant="10" id="ezV-9H-OMz"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="7Oz-eM-CKO" secondAttribute="trailing" constant="50" id="f6i-KI-ZHo"/>
+                            <constraint firstItem="7Oz-eM-CKO" firstAttribute="top" secondItem="x4V-sP-DiO" secondAttribute="bottom" constant="5" id="foN-UW-xCO"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="FNL-36-PYg" secondAttribute="trailing" constant="50" id="ihy-gz-lGw"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="5oX-c8-0Xh" secondAttribute="trailing" constant="50" id="jf7-eD-Nyr"/>
+                            <constraint firstItem="5oX-c8-0Xh" firstAttribute="top" secondItem="x4D-rV-1E6" secondAttribute="bottom" constant="5" id="jfg-IM-46Q"/>
+                            <constraint firstItem="FNL-36-PYg" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="jry-6h-rZn"/>
+                            <constraint firstItem="tTr-Hf-k5p" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="k8J-JN-hjx"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="HdW-Ow-efs" secondAttribute="trailing" constant="50" id="mo6-Aj-GiK"/>
+                            <constraint firstItem="7Oz-eM-CKO" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="oAu-92-QiY"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="Ibx-Y9-S61" secondAttribute="trailing" constant="50" id="qxG-EK-BIb"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="tTr-Hf-k5p" secondAttribute="trailing" constant="50" id="tYj-T1-XCb"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="x4V-sP-DiO" secondAttribute="trailing" constant="50" id="wwm-bm-XJA"/>
+                            <constraint firstItem="Yq2-lp-Hg3" firstAttribute="trailing" secondItem="rfY-jR-Fqm" secondAttribute="trailing" constant="50" id="yLa-dZ-ww1"/>
+                            <constraint firstItem="rfY-jR-Fqm" firstAttribute="leading" secondItem="Yq2-lp-Hg3" secondAttribute="leading" constant="50" id="yiC-dH-ZIn"/>
+                            <constraint firstItem="x4V-sP-DiO" firstAttribute="top" secondItem="5oX-c8-0Xh" secondAttribute="bottom" constant="10" id="zrT-QO-Yqc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Yq2-lp-Hg3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="lBS-qm-ZGS"/>
+                    <navigationItem key="navigationItem" id="qcV-UP-SFp"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1694" y="824"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="sHE-uU-hPU">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileVC" id="DFP-VS-BBh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" id="q1Q-aM-Tf7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NEj-Ik-uey">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zwd-9m-Prd" kind="relationship" relationship="rootViewController" id="t0y-zT-B9U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I79-XZ-Vk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="780" y="824"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Antonio_Banderas_1997" width="786" height="1024"/>
+    </resources>
+</document>
