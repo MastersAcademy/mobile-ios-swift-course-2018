@@ -9,23 +9,25 @@
 import UIKit
 
 class RepositoryViewController: UIViewController {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
+    
+    var repo: RepoPresentation?
 
-    var presentation: RepositoriesPresentation? {
-        willSet {
-            loadViewIfNeeded()
-        }
-        didSet {
-            updateViewWithPresentation()
-        }
-    }
-    
-    func updateViewWithPresentation() {
-        presentation.map { item in
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Repository"
+  //      setLabels()
+        //tabBarController?.tabBar.isHidden = true
     }
+    
+//    func setLabels() {
+//        titleLabel.text = repo?.title ?? "Tittle"
+//        subtitleLabel.text = repo?.subtitle ?? "Subtitle"
+//        descriptionLabel.text = repo?.description ?? "Desctiption"
+//        languageLabel.text = repo?.language ?? "Language"
+//    }
 }

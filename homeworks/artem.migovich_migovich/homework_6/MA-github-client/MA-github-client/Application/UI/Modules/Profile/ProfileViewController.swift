@@ -24,10 +24,10 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Profile"
-        updateProfile()
+        setProfile()
     }
     
-    func updateProfile() {
+    func setProfile() {
         profileImageView.image = UIImage(named: profile.imageName)
         nameLabel.attributedText = profile.name
         nicknameLabel.attributedText = profile.nickname
