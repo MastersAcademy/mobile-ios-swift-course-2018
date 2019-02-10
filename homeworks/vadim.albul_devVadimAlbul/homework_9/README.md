@@ -1,20 +1,24 @@
-# ** (ЖКХ) Utilities Report **
-***
- 
- Додаток для реєстру, зняття, збереження показників лічильників комунальних послуг за місяць та відправку їх на відповіні API служби надання комунальних послуг. 
+# **[(ЖКХ) Utilities Report](https://github.com/devVadimAlbul/UtilitiesReport)**
 
- Основні функції додатку:
-  * сканування і зняття показників лічильників з фотографії;
-  * ведення показників в текстове поле вразі помилкового сканування з фотографії;
-  * збереження покахникі в базі даних і введення реєстру показників;
-  * вибір підприємст надання послуг зі списку можливих і введення відповідних особистих даних для відправки показників на API підприємства;
+[![CocoaPods compatible](https://img.shields.io/cocoapods/v/ReactiveCocoa.svg?style=for-the-badge)](#cocoapods) ![Swift 4.1.x](https://img.shields.io/badge/Swift-4.1.x-orange.svg?colorB=green&style=for-the-badge) ![platforms](https://img.shields.io/badge/platforms-iOS-lightgrey.svg?colorB=green&style=for-the-badge)
 
- Користувачу може сподобатися функціонал:
-  * зняття показників лічильника лише сфографувавши лічильник;
-  * передача показників через додаток в різні підприємста наданнякомунальних послуг;
-  * ведення реєстру показників по місяцям і різницю показників;
+## About
+ **(ЖКХ) Utilities Report** - is application for the registry and save of indicators of utility counters with the ability to send them to the corresponding API service utilities.
 
- Даний додаток буде корисний для користувачів які ведуть реєстр витрат по комунальним послугам і нехотять витрачати на це багато часу.
+## Features
+* scan metrics from a counter using to photos or enter to textfield;
+* saving of indicators of counters and displaying the history of their sending to communal enterprises;
+* calculation of the difference between meter's figures;
 
-Основними скадностями додатку являється опредлінна показників лічильника по ріним фото та відправкаї їх в різні комунальні підприємства через API, Viber чи через Email...
+## The user may like functionality
+* scanning metrics from a counters using photos;
+* sending metrics from a counter to API of utility companies from the app;
+* showing the differences between metrics of counters;
+* displaying the history of sending metrics of counters to the communal enterprises;
 
+
+## The Target Audience
+For all people which keeping a register of utility costs and do not want to waste much time.
+
+## Design Pattern
+Project uses MVP architecture pattern.
