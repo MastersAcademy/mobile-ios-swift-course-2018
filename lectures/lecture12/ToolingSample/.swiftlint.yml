@@ -14,6 +14,8 @@ disabled_rules: # rule identifiers to exclude from running
 excluded: # paths to ignore during linting. Takes precedence over `included`.
  # - Carthage
   - Pods
+  - ToolingSample/Common/R.generated.swift
+  - ToolingSample/Common/Sourcery.generated.swift
 
  # - Source/ExcludedFile.swift
 

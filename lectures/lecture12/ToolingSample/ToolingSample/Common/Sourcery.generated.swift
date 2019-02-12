@@ -69,3 +69,33 @@ import AppKit
 
 
 
+class StorageMock: Storage {
+
+    //MARK: - save
+
+    var saveCallsCount = 0
+    var saveCalled: Bool {
+        return saveCallsCount > 0
+    }
+    var saveClosure: (() -> Void)?
+
+    func save() {
+        saveCallsCount += 1
+        saveClosure?()
+    }
+
+    //MARK: - fetch
+
+    var fetchCallsCount = 0
+    var fetchCalled: Bool {
+        return fetchCallsCount > 0
+    }
+    var fetchReturnValue: String?
+    var fetchClosure: (() -> String?)?
+
+    func fetch() -> String? {
+        fetchCallsCount += 1
+        return fetchClosure.map({ $0() }) ?? fetchReturnValue
+    }
+
+}

@@ -6,8 +6,8 @@ target 'ToolingSample' do
   use_frameworks!
 
   # Pods for ToolingSample
-  #pod 'SwiftLint', '0.30.1'
-  #pod 'Sourcery', '0.15.0'
-  #pod 'R.swift', '5.0.2'
+  pod 'SwiftLint', '0.30.1'
+  pod 'Sourcery', '0.15.0'
+  pod 'R.swift', '5.0.2'
 
 end
