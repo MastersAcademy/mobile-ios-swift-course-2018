@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="d61-t2-noL">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation-->
+        <scene sceneID="edC-ra-w40">
+            <objects>
+                <navigationController title="Navigation" id="d61-t2-noL" customClass="LTNavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Launcher" image="ic_tabbar_launch" selectedImage="ic_tabbar_launch_selected" id="c5b-6U-A4W"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="701-EF-jYa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ucl-aQ-CWW" kind="relationship" relationship="rootViewController" id="QBU-wr-YmU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m0Z-Kw-Z1Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="47"/>
+        </scene>
+        <!--Launcher-->
+        <scene sceneID="NzD-Pn-Vac">
+            <objects>
+                <viewController storyboardIdentifier="LTLauncherViewController" title="Launcher" id="Ucl-aQ-CWW" customClass="LTLauncherViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z4s-lr-mIR"/>
+                        <viewControllerLayoutGuide type="bottom" id="zTa-0y-uEp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d61-ls-6iv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKK-CS-cAm">
+                                <rect key="frame" x="107.5" y="316" width="160" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="QuI-P5-Z4g"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="1" green="0.28061049643751435" blue="0.11622152504609284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionButtonDidPressed:" destination="Ucl-aQ-CWW" eventType="touchUpInside" id="yME-Bw-NJI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PKK-CS-cAm" firstAttribute="centerY" secondItem="d61-ls-6iv" secondAttribute="centerY" id="Pn3-s5-c3L"/>
+                            <constraint firstItem="PKK-CS-cAm" firstAttribute="centerX" secondItem="d61-ls-6iv" secondAttribute="centerX" id="sx3-SD-7Zz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="yk8-nP-QZn"/>
+                    <connections>
+                        <outlet property="actionButton" destination="PKK-CS-cAm" id="KkF-H0-ha3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="afs-Om-ZUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="673" y="46"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_tabbar_launch" width="30" height="30"/>
+        <image name="ic_tabbar_launch_selected" width="30" height="30"/>
+    </resources>
+</document>

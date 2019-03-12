@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16E195" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="LocationManagedModel" representedClassName="LocationManagedModel" syncable="YES">
+        <attribute name="createDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="dataId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="locationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UserManagedModel" inverseName="locationHistory" inverseEntity="UserManagedModel" syncable="YES"/>
+    </entity>
+    <entity name="UserManagedModel" representedClassName="UserManagedModel" syncable="YES">
+        <attribute name="dataId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="locationHistory" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="LocationManagedModel" inverseName="user" inverseEntity="LocationManagedModel" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="UserManagedModel" positionX="-63" positionY="-18" width="128" height="75"/>
+        <element name="LocationManagedModel" positionX="-54" positionY="-9" width="128" height="135"/>
+    </elements>
+</model>

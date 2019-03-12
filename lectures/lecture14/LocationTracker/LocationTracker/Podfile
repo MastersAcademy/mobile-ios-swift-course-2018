@@ -1,0 +1,14 @@
+platform :ios, "9.0"
+#use_frameworks!
+
+def install_pods
+    pod 'MagicalRecord', :inhibit_warnings => true
+end
+
+target 'LocationTracker' do
+    install_pods
+end
+
+target 'LocationTracker-Unit-Tests' do
+    install_pods
+end
