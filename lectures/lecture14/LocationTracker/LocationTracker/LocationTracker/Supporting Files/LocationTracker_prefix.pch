@@ -1,0 +1,14 @@
+//
+//  LocationTracker_prefix.pch
+//  LocationTracker
+//
+//  Created by Maksym Savisko on 5/14/17.
+//  Copyright © 2017 Maksym Savisko. All rights reserved.
+//
+
+#ifndef LocationTracker_prefix_pch
+#define LocationTracker_prefix_pch
+
+#import "NSError+LTCommon.h"
+
+#endif /* LocationTracker_prefix_pch */

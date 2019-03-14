@@ -1,0 +1,7 @@
+git_url("")
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+
+app_identifier(["com.MaksymSavisko.LocationTracker"])
+username("") # Your Apple Developer Portal username
+team_id("")
